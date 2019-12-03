@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule} from '@angular/platform-browser';
 import {LOCALE_ID, NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
 import {
   ButtonModule,
   CardModule,
@@ -17,19 +17,23 @@ import {
 } from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { IngredienteListComponent } from './ingrediente/ingrediente-list.component';
+import {IngredienteListComponent} from './ingrediente/ingrediente-list.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpRequestInterceptor} from './congif/http-request.interceptor';
-import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
-import {MenuItem} from "primeng/api/menuitem";
+import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {FormsModule} from '@angular/forms';
+import {ComidaFormComponent} from "./comida/comida-form.component";
+import {ComidaListComponent} from "./comida/comida-list.component";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IngredienteListComponent,
-    IngredienteFormComponent
+    IngredienteFormComponent,
+    ComidaFormComponent,
+    ComidaListComponent
   ],
   imports: [
     BrowserModule,
@@ -63,4 +67,5 @@ import {FormsModule} from '@angular/forms';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

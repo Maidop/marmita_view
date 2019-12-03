@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
             },
             {
               label: 'Comidas',
-              routerLink: '',
+              routerLink: '/comida',
               icon: '',
             }
         ]
