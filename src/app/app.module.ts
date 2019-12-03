@@ -10,7 +10,7 @@ import {
   ConfirmationService,
   ConfirmDialogModule,
   MenuModule,
-  MessageService, PanelMenuModule,
+  MessageService,
   SidebarModule,
   TableModule,
   ToastModule
@@ -22,6 +22,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpRequestInterceptor} from './congif/http-request.interceptor';
 import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
 import {MenuItem} from "primeng/api/menuitem";
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import {MenuItem} from "primeng/api/menuitem";
     ConfirmDialogModule,
     HttpClientModule,
     PanelMenuModule,
+    FormsModule,
+    InputTextModule,
   ],
   providers: [
     SidebarService,
