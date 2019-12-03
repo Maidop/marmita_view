@@ -1,4 +1,4 @@
-<p-card header="Comida">
+<p-card header="Ingrediente">
   <div class="text-right m-2">
     <button (click)="salvar()"
             class="ui-button-raised"
@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-12">
         <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.ingredientes"
+            <input [(ngModel)]="objeto.comida"
                    id="descricao"
                    pInputText
                    size="30"
@@ -31,3 +31,4 @@
     </div>
   </div>
 </p-card>
+
