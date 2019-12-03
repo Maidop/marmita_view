@@ -1,6 +1,6 @@
-<p-card header="Lista de Ingredientes">
+<p-card header="Lista de Clientes">
   <div class="text-right m-2">
-    <button [routerLink]="['/ingrediente/form']"
+    <button [routerLink]="['/cliente/form']"
             class="ui-button-raised"
             label="Novo"
             pButton
@@ -19,14 +19,11 @@
         <th class="text-center">Ações</th>
       </tr>
     </ng-template>
-
     <ng-template let-columns="columns" let-rowData pTemplate="body">
-
       <tr>
         <td *ngFor="let col of columns">
           {{rowData[col.field]}}
         </td>
-
         <td class="text-center">
           <i [queryParams]="{id: rowData['id']}"
              [routerLink]="['form']"
@@ -36,14 +33,13 @@
              (click)="excluir(rowData['id'])"
              title="Excluir"></i>
         </td>
-
       </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">
       <tr>Sem Registros.</tr>
     </ng-template>
     <ng-template pTemplate="summary">
-      {{lista?.length}} ingredientes.
+      {{lista?.length}} clientes.
     </ng-template>
   </p-table>
 </p-card>

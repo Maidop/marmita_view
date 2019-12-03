@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {Ingrediente} from './ingrediente';
-import {ListComponent} from '../component/list.component';
-import {ConfirmationService, MessageService} from 'primeng';
-import {Title} from '@angular/platform-browser';
-import {IngredienteService} from '../service/ingrediente.service';
+import {ConfirmationService, MessageService} from "primeng";
+import {Title} from "@angular/platform-browser";
+import {ListComponent} from "../component/list.component";
+import {Ingrediente} from "../ingrediente/ingrediente";
+import {Comida} from "./comida";
+import {ComidaService} from "../service/comida.service";
 
 @Component({
-  selector: 'app-ingrediente-list',
-  templateUrl: './ingrediente-list.component.html',
-  styleUrls: ['./ingrediente-list.component.scss']
+  selector: 'app-comida-list',
+  templateUrl: './comida-list.component.html',
+  styleUrls: ['./comida-list.component.scss']
 })
-export class IngredienteListComponent extends ListComponent<Ingrediente> implements OnInit {
+export class ComidaListComponent  extends ListComponent<Comida>  implements OnInit {
 
-  constructor(private ingredienteService: IngredienteService,
+  constructor(private comidaService: ComidaService,
               private messageService: MessageService,
               private confirmationService: ConfirmationService,
               private titleService: Title) {
@@ -27,12 +28,11 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
 
   ngOnInit() {
     this.titleService.setTitle('Lista de Ingredientes');
-    this.carregarLista();
   }
 
   carregarLista(): void {
     this.loading = true;
-    this.ingredienteService.findAll().subscribe(res => {
+    this.comidaService.findAll().subscribe(res => {
       this.lista = res;
       setTimeout(() => this.loading = false);
     });
@@ -49,7 +49,7 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
 
   private deletar(id: number): void {
     this.loading = true;
-    this.ingredienteService.delete(id).subscribe(() => {
+    this.comidaService.delete(id).subscribe(() => {
       this.carregarLista();
 
       this.messageService.add({
@@ -65,5 +65,6 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
       setTimeout(() => this.loading = false);
     });
   }
-}
 
+
+}
