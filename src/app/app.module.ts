@@ -8,7 +8,7 @@ import {
   ButtonModule,
   CardModule,
   ConfirmationService,
-  ConfirmDialogModule,
+  ConfirmDialogModule, InputTextModule,
   MenuModule,
   MessageService,
   SidebarModule,
@@ -21,6 +21,7 @@ import { IngredienteListComponent } from './ingrediente/ingrediente-list.compone
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpRequestInterceptor} from './congif/http-request.interceptor';
 import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,8 @@ import { IngredienteFormComponent } from './ingrediente/ingrediente-form.compone
     TableModule,
     ConfirmDialogModule,
     HttpClientModule,
+    FormsModule,
+    InputTextModule,
   ],
   providers: [
     SidebarService,
