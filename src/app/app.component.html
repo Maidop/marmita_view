@@ -1,6 +1,10 @@
-<div class="barraPrincipal">
-
+<p-toast></p-toast>
+<p-sidebar styleClass="b-gradient" [style]="{width: '230px'}" [(visible)]="displaySidebar">
+  <p-menu [model]="menuList"></p-menu>
+</p-sidebar>
+<div class="menubar b-gradient">
+  <i pTooltip="Menu" class="pi pi-align-justify font2x" (click)="abrirFecharMenu()"></i>
 </div>
-<div class="container">
+<div class="ui-g">
   <router-outlet></router-outlet>
 </div>
