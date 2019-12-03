@@ -1,10 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #FFF9C4;
+  background-color: #FFF9C4!important;
+}
+
+.cabecalho {
+  background-color: #F57F17;
 }
 
 .pSidebar {
   font-size: 2em!important;
   padding-left: .25em!important;
   padding-top: .25em!important;
+}
+
+.divPrincipal {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 80%;
+  min-height: 80%;
+  max-height: 80%;
 }
