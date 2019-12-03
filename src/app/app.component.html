@@ -1,10 +1,25 @@
-<p-toast></p-toast>
-<p-sidebar styleClass="b-gradient" [style]="{width: '230px'}" [(visible)]="displaySidebar">
-  <p-menu [model]="menuList"></p-menu>
-</p-sidebar>
-<div>
-  <i pTooltip="Menu" class="pi pi-align-justify font2x" (click)="abrirFecharMenu()"></i>
-</div>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<header>
+  <p-toast></p-toast>
+  <p-sidebar styleClass="b-gradient" [style]="{width: '230px'}" [(visible)]="displaySidebar">
+    <p-menu [model]="menuList"></p-menu>
+  </p-sidebar>
+  <div class="row">
+    <div class="col-1">
+      <i pTooltip="Menu" class="pi pi-bars pSidebar" (click)="abrirFecharMenu()"></i>
+    </div>
+    <div class="col-5">
+      <h3>Aqui terá uma logo</h3>
+    </div>
+    <div class="col-6 text-right">
+
+    </div>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer>
+
+</footer>
