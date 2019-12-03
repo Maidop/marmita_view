@@ -1,5 +1,5 @@
 export class Ingrediente {
   id: number;
-  ingrediente: string;
+  ingredientes: string;
   inativo: boolean;
 }

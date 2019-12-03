@@ -25,6 +25,7 @@ import {FormsModule} from '@angular/forms';
 import {ComidaFormComponent} from "./comida/comida-form.component";
 import {ComidaListComponent} from "./comida/comida-list.component";
 
+import { ClienteFormComponent } from './cliente/cliente-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {ComidaListComponent} from "./comida/comida-list.component";
     IngredienteListComponent,
     IngredienteFormComponent,
     ComidaFormComponent,
-    ComidaListComponent
+    ComidaListComponent,
+    ClienteFormComponent
   ],
   imports: [
     BrowserModule,
