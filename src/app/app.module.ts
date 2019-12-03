@@ -1,17 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {ButtonModule, MenuModule, MessageService, SidebarModule, ToastModule} from 'primeng';
+import {
+  ButtonModule,
+  CardModule,
+  ConfirmationService,
+  ConfirmDialogModule,
+  MenuModule,
+  MessageService,
+  SidebarModule,
+  TableModule,
+  ToastModule
+} from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { IngredienteListComponent } from './ingrediente/ingrediente-list.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HttpRequestInterceptor} from './congif/http-request.interceptor';
+import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    IngredienteListComponent,
+    IngredienteFormComponent
   ],
   imports: [
     BrowserModule,
@@ -20,10 +36,25 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ToastModule,
     SidebarModule,
     MenuModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CardModule,
+    TableModule,
+    ConfirmDialogModule,
+    HttpClientModule,
   ],
   providers: [
-    SidebarService, MessageService
+    SidebarService,
+    MessageService,
+    ConfirmationService,
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt'
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
