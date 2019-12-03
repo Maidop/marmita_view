@@ -17,16 +17,10 @@ export class ComidaListComponent  extends ListComponent<Comida>  implements OnIn
               private confirmationService: ConfirmationService,
               private titleService: Title) {
     super();
-    this.cols = [
-      {field: 'id', header: 'Id'},
-      {field: 'comida', header: 'Nome'},
-      {field: 'inativo', header: 'Inativo'},
-    ];
-
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Lista de Ingredientes');
+    this.titleService.setTitle('Lista de Comida');
   }
 
   carregarLista(): void {
