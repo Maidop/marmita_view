@@ -54,6 +54,7 @@ import {ComidaListComponent} from './comida/comida-list.component';
     PanelMenuModule,
     FormsModule,
     InputTextModule,
+    CheckboxModule,
   ],
   providers: [
     SidebarService,

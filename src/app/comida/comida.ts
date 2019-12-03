@@ -1,4 +1,4 @@
-import {Ingrediente} from "../ingrediente/ingrediente"
+import {Ingrediente} from '../ingrediente/ingrediente';
 
 export class Comida {
   id: number;

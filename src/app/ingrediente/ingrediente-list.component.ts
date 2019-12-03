@@ -17,12 +17,11 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
               private confirmationService: ConfirmationService,
               private titleService: Title) {
     super();
-    this.cols = [
-      {field: 'id', header: 'Id'},
-      {field: 'ingredientes', header: 'Ingrediente'},
-      {field: 'inativo', header: 'Status'},
-    ];
-
+    // this.cols = [
+    //   {field: 'id', header: 'Id'},
+    //   {field: 'ingredientes', header: 'Ingrediente'},
+    //   {field: 'inativo', header: 'Status'},
+    // ];
   }
 
   ngOnInit() {

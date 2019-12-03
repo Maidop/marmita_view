@@ -24,7 +24,7 @@ export class ClienteListComponent extends ListComponent<Cliente> implements OnIn
       {field: 'telefone', header: 'Telefone'},
       {field: 'senha', header: 'Senha'},
       {field: 'cep', header: 'Cep'},
-      {field: 'logadouro', header: 'Logradouro'},
+      {field: 'logradouro', header: 'Logradouro'},
       {field: 'numero', header: 'Número'},
       {field: 'bairro', header: 'Bairro'},
     ];
