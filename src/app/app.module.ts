@@ -8,9 +8,9 @@ import {
   ButtonModule,
   CardModule,
   ConfirmationService,
-  ConfirmDialogModule,
+  ConfirmDialogModule, InputTextModule,
   MenuModule,
-  MessageService,
+  MessageService, PanelMenuModule,
   SidebarModule,
   TableModule,
   ToastModule
