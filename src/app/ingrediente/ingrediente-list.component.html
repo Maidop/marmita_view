@@ -26,9 +26,7 @@
         <td *ngFor="let col of columns">
           {{rowData[col.field]}}
         </td>
-        <td class="text-center">
-<!--          <p-checkbox [(ngModel)]="value" binary="true"></p-checkbox>-->
-        </td>
+
         <td class="text-center">
           <i [queryParams]="{id: rowData['id']}"
              [routerLink]="['form']"
