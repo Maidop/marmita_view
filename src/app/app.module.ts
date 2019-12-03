@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {
   ButtonModule,
-  CardModule,
+  CardModule, CheckboxModule,
   ConfirmationService,
   ConfirmDialogModule, DialogModule, InputTextModule,
   MenuModule,
@@ -58,6 +58,7 @@ import { LoginComponent } from './login/login.component';
     InputTextModule,
     DialogModule,
     SplitButtonModule,
+    CheckboxModule,
   ],
   providers: [
     SidebarService,

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ConfirmationService, MessageService} from "primeng";
-import {Title} from "@angular/platform-browser";
-import {ListComponent} from "../component/list.component";
-import {Ingrediente} from "../ingrediente/ingrediente";
-import {Comida} from "./comida";
-import {ComidaService} from "../service/comida.service";
+import {ListComponent} from '../component/list.component';
+import {Comida} from './comida';
+import {ComidaService} from '../service/comida.service';
+import {ConfirmationService, MessageService} from 'primeng';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-comida-list',
@@ -18,16 +17,10 @@ export class ComidaListComponent  extends ListComponent<Comida>  implements OnIn
               private confirmationService: ConfirmationService,
               private titleService: Title) {
     super();
-    this.cols = [
-      {field: 'id', header: 'Id'},
-      {field: 'ingredientes', header: 'Ingrediente'},
-      {field: 'inativo', header: 'Status'},
-    ];
-
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Lista de Ingredientes');
+    this.titleService.setTitle('Lista de Comida');
   }
 
   carregarLista(): void {
@@ -40,7 +33,7 @@ export class ComidaListComponent  extends ListComponent<Comida>  implements OnIn
 
   excluir(id: number): void {
     this.confirmationService.confirm({
-      message: 'Você tem certeza que deseja excluir esse ingrediente?',
+      message: 'Você tem certeza que deseja excluir essa comida?',
       accept: () => this.deletar(id),
       acceptLabel: 'SIM',
       rejectLabel: 'NÃO',
