@@ -17,17 +17,17 @@ export class ClienteListComponent extends ListComponent<Cliente> implements OnIn
               private confirmationService: ConfirmationService,
               private titleService: Title) {
     super();
-    this.cols = [
-      {field: 'id', header: 'Id'},
-      {field: 'nome', header: 'Nome'},
-      {field: 'cpf', header: 'Cpf'},
-      {field: 'telefone', header: 'Telefone'},
-      {field: 'senha', header: 'Senha'},
-      {field: 'cep', header: 'Cep'},
-      {field: 'logradouro', header: 'Logradouro'},
-      {field: 'numero', header: 'Número'},
-      {field: 'bairro', header: 'Bairro'},
-    ];
+    // this.cols = [
+    //   {field: 'id', header: 'Id'},
+    //   {field: 'nome', header: 'Nome'},
+    //   {field: 'cpf', header: 'Cpf'},
+    //   {field: 'telefone', header: 'Telefone'},
+    //   {field: 'senha', header: 'Senha'},
+    //   {field: 'cep', header: 'Cep'},
+    //   {field: 'logradouro', header: 'Logradouro'},
+    //   {field: 'numero', header: 'Número'},
+    //   {field: 'bairro', header: 'Bairro'},
+    // ];
   }
 
 
