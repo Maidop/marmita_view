@@ -19,8 +19,8 @@
       <ng-template pTemplate="body" let-objeto>
         <tr class="text-center">
           <td>{{objeto.id}}</td>
-          <td>{{objeto}}</td>
-          <td>{{objeto.}}</td>
+          <td>{{objeto.nome}}</td>
+          <td>{{objeto.inativo}}</td>
           <td>
             <i [queryParams]="{id: objeto['id']}"
                [routerLink]="['form']"
@@ -33,8 +33,6 @@
         </tr>
       </ng-template>
     </p-table>
-
-
-  <p-confirmDialog header="Confirmation"
+  </p-card>
+<p-confirmDialog header="Confirmation"
                    icon="pi pi-exclamation-triangle"></p-confirmDialog>
-</p-card>
