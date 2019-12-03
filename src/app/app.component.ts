@@ -20,20 +20,20 @@ export class AppComponent implements OnInit {
         icon: 'pi pi-home'
       },
         {
-          label: 'Cadastros',  //routerLink: '/ingrediente',
+          label: 'Cadastros',
           icon: '',
-          items:[
+          items: [
             {
               label: 'Ingredientes',
               routerLink: '/ingrediente',
               icon: '',
             },
             {
-              label: 'Comidas',
-              routerLink: '',
+              label: 'Cliente',
+              routerLink: '/cliente',
               icon: '',
             }
-        ]
+          ]
       }
     ];
   }

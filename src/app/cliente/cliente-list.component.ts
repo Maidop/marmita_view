@@ -1,29 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import {Ingrediente} from './ingrediente';
-import {ListComponent} from '../component/list.component';
 import {ConfirmationService, MessageService} from 'primeng';
 import {Title} from '@angular/platform-browser';
-import {IngredienteService} from '../service/ingrediente.service';
+import {ListComponent} from '../component/list.component';
+import {Cliente} from './cliente';
+import {ClienteService} from '../service/cliente.service';
 
 @Component({
-  selector: 'app-ingrediente-list',
-  templateUrl: './ingrediente-list.component.html',
-  styleUrls: ['./ingrediente-list.component.scss']
+  selector: 'app-cliente-list',
+  templateUrl: './cliente-list.component.html',
+  styleUrls: ['./cliente-list.component.scss']
 })
-export class IngredienteListComponent extends ListComponent<Ingrediente> implements OnInit {
+export class ClienteListComponent extends ListComponent<Cliente> implements OnInit {
 
-  constructor(private ingredienteService: IngredienteService,
+  constructor(private clienteService: ClienteService,
               private messageService: MessageService,
               private confirmationService: ConfirmationService,
               private titleService: Title) {
     super();
     this.cols = [
       {field: 'id', header: 'Id'},
-      {field: 'ingrediente', header: 'Ingrediente'},
-      {field: 'inativo', header: 'Status'},
+      {field: 'nome', header: 'Nome'},
+      {field: 'cpf', header: 'Cpf'},
+      {field: 'telefone', header: 'Telefone'},
+      {field: 'senha', header: 'Senha'},
+      {field: 'cep', header: 'Cep'},
+      {field: 'logadouro', header: 'Logradouro'},
+      {field: 'numero', header: 'Número'},
+      {field: 'bairro', header: 'Bairro'},
     ];
-
   }
+
 
   ngOnInit() {
     this.titleService.setTitle('Lista de Ingredientes');
@@ -32,7 +38,7 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
 
   carregarLista(): void {
     this.loading = true;
-    this.ingredienteService.findAll().subscribe(res => {
+    this.clienteService.findAll().subscribe(res => {
       this.lista = res;
       setTimeout(() => this.loading = false);
     });
@@ -40,7 +46,7 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
 
   excluir(id: number): void {
     this.confirmationService.confirm({
-      message: 'Você tem certeza que deseja excluir esse ingrediente?',
+      message: 'Você tem certeza que deseja excluir esse cliente?',
       accept: () => this.deletar(id),
       acceptLabel: 'SIM',
       rejectLabel: 'NÃO',
@@ -49,7 +55,7 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
 
   private deletar(id: number): void {
     this.loading = true;
-    this.ingredienteService.delete(id).subscribe(() => {
+    this.clienteService.delete(id).subscribe(() => {
       this.carregarLista();
 
       this.messageService.add({
@@ -65,5 +71,5 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
       setTimeout(() => this.loading = false);
     });
   }
-}
 
+}

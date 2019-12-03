@@ -23,13 +23,17 @@ import {HttpRequestInterceptor} from './congif/http-request.interceptor';
 import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
 import {MenuItem} from "primeng/api/menuitem";
 import {FormsModule} from '@angular/forms';
+import { ClienteListComponent } from './cliente/cliente-list.component';
+import { ClienteFormComponent } from './cliente/cliente-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IngredienteListComponent,
-    IngredienteFormComponent
+    IngredienteFormComponent,
+    ClienteListComponent,
+    ClienteFormComponent
   ],
   imports: [
     BrowserModule,

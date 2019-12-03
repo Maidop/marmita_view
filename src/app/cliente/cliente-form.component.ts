@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import {Ingrediente} from './ingrediente';
-import {IngredienteService} from '../service/ingrediente.service';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MessageService} from 'primeng';
+import {Cliente} from './cliente';
+import {ClienteService} from '../service/cliente.service';
+import {Ingrediente} from '../ingrediente/ingrediente';
 
 @Component({
-  selector: 'app-ingrediente-form',
-  templateUrl: './ingrediente-form.component.html',
-  styleUrls: ['./ingrediente-form.component.scss']
+  selector: 'app-cliente-form',
+  templateUrl: './cliente-form.component.html',
+  styleUrls: ['./cliente-form.component.scss']
 })
-export class IngredienteFormComponent implements OnInit {
+export class ClienteFormComponent implements OnInit {
 
-  objeto: Ingrediente;
+  objeto: Cliente;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private ingredienteService: IngredienteService,
+              private clienteService: ClienteService,
               private router: Router,
               private messageService: MessageService) {
   }
@@ -22,7 +23,7 @@ export class IngredienteFormComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(params => {
       if (params.has('id')) {
-        this.ingredienteService.findOne(parseInt(params.get('id'))).subscribe(res => {
+        this.clienteService.findOne(parseInt(params.get('id'))).subscribe(res => {
           this.objeto = res;
         });
       } else {
@@ -32,7 +33,7 @@ export class IngredienteFormComponent implements OnInit {
   }
 
   salvar(): void {
-    this.ingredienteService.save(this.objeto).subscribe(res => {
+    this.clienteService.save(this.objeto).subscribe(res => {
       this.objeto = res;
 
       this.messageService.add({
@@ -40,7 +41,7 @@ export class IngredienteFormComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('ingrediente');
+      this.router.navigateByUrl('cliente');
     }, erro => {
       this.messageService.add({
         severity: 'error',
@@ -50,7 +51,7 @@ export class IngredienteFormComponent implements OnInit {
   }
 
   private resetaForm(): void {
-    this.objeto = new Ingrediente();
+    this.objeto = new Cliente();
   }
 
 }
