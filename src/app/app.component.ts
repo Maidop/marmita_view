@@ -13,17 +13,27 @@ export class AppComponent implements OnInit {
   menuList: MenuItem[];
 
   constructor(private sidebarService: SidebarService) {
-    this.sidebarService.getMostrar$().subscribe(val => this.displaySidebar = val);
     this.menuList = [
       {
         label: 'Início',
         routerLink: '',
         icon: 'pi pi-home'
       },
-      {
-        label: 'Ingrediente',
-        routerLink: '/ingrediente',
-        icon: ''
+        {
+          label: 'Cadastros',  //routerLink: '/ingrediente',
+          icon: '',
+          items:[
+            {
+              label: 'Ingredientes',
+              routerLink: '/ingrediente',
+              icon: '',
+            },
+            {
+              label: 'Comidas',
+              routerLink: '',
+              icon: '',
+            }
+        ]
       }
     ];
   }

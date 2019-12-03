@@ -1,13 +1,7 @@
 <header>
   <div class="cabecalho">
     <p-toast></p-toast>
-    <p-sidebar styleClass="b-gradient" [style]="{width: '230px'}" [(visible)]="displaySidebar">
-      <p-menu [model]="menuList"></p-menu>
-    </p-sidebar>
     <div class="row">
-      <div class="col-1">
-        <i pTooltip="Menu" class="pi pi-bars pSidebar" (click)="abrirFecharMenu()"></i>
-      </div>
       <div class="col-5">
         <h3>Aqui terá uma logo</h3>
       </div>
@@ -18,8 +12,15 @@
   </div>
 </header>
 <main>
-  <div class="container divPrincipal">
-    <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-2">
+      <p-panelMenu [model]="menuList"></p-panelMenu>
+    </div>
+    <div class="col-10">
+      <div class="container divPrincipal">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
 </main>
 <footer>
