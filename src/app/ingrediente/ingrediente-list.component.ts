@@ -19,7 +19,7 @@ export class IngredienteListComponent extends ListComponent<Ingrediente> impleme
     super();
     this.cols = [
       {field: 'id', header: 'Id'},
-      {field: 'ingrediente', header: 'Ingrediente'},
+      {field: 'ingredientes', header: 'Ingrediente'},
       {field: 'inativo', header: 'Status'},
     ];
 
