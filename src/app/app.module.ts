@@ -8,10 +8,10 @@ import {
   ButtonModule,
   CardModule,
   ConfirmationService,
-  ConfirmDialogModule, InputTextModule,
+  ConfirmDialogModule, DialogModule, InputTextModule,
   MenuModule,
   MessageService, PanelMenuModule,
-  SidebarModule,
+  SidebarModule, SplitButtonModule,
   TableModule,
   ToastModule
 } from 'primeng';
@@ -19,17 +19,15 @@ import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { IngredienteListComponent } from './ingrediente/ingrediente-list.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {HttpRequestInterceptor} from './congif/http-request.interceptor';
-import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {HttpRequestInterceptor} from './config/http-request.interceptor';
-import { IngredienteFormComponent } from './ingrediente/ingrediente-form.component';
-import {MenuItem} from "primeng/api/menuitem";
 import {FormsModule} from '@angular/forms';
 
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
 import {ComidaFormComponent} from './comida/comida-form.component';
 import {ComidaListComponent} from './comida/comida-list.component';
+import {IngredienteFormComponent} from "./ingrediente/ingrediente-form.component";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +38,8 @@ import {ComidaListComponent} from './comida/comida-list.component';
     ComidaFormComponent,
     ComidaListComponent,
     ClienteFormComponent,
-    ClienteListComponent
+    ClienteListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +56,8 @@ import {ComidaListComponent} from './comida/comida-list.component';
     PanelMenuModule,
     FormsModule,
     InputTextModule,
+    DialogModule,
+    SplitButtonModule,
   ],
   providers: [
     SidebarService,
