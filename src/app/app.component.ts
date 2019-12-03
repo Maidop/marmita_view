@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.menuList = [
       {
         label: 'Home',
-        routerLink: '/',
+        routerLink: '',
         icon: 'pi pi-home'
       }
     ];
