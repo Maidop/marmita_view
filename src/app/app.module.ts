@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {ButtonModule} from 'primeng';
+import {ButtonModule, MenuModule, MessageService, SidebarModule, ToastModule} from 'primeng';
+import {SidebarService} from './service/sidebar.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,15 @@ import {ButtonModule} from 'primeng';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule,
+    SidebarModule,
+    MenuModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    SidebarService, MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
