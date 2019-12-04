@@ -8,10 +8,10 @@ import {MessageService} from "primeng";
 
 @Component({
   selector: 'app-cardapio',
-  templateUrl: './cardapio.component.html',
-  styleUrls: ['./cardapio.component.scss']
+  templateUrl: './cardapio-list.component.html',
+  styleUrls: ['./cardapio-list.component.scss']
 })
-export class CardapioComponent extends ListComponent<Cardapio> implements OnInit {
+export class CardapioListComponent extends ListComponent<Cardapio> implements OnInit {
 
   constructor(private cardapioService: CardapioService,
               private messageService: MessageService) {

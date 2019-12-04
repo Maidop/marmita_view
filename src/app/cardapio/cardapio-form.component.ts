@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CardapioService} from "../../service/cardapio.service";
-import {Cardapio} from "../Cardapio";
+import {CardapioService} from "../service/cardapio.service";
+import {Cardapio} from "./Cardapio";
 
 @Component({
   selector: 'app-cardapio-form',
