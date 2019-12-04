@@ -6,10 +6,10 @@ import {TamanhoService} from "../service/tamanho.service";
 
 @Component({
   selector: 'app-tamanho',
-  templateUrl: './tamanho.component.html',
-  styleUrls: ['./tamanho.component.scss']
+  templateUrl: './tamanho-form.component.html',
+  styleUrls: ['./tamanho-form.component.scss']
 })
-export class TamanhoComponent implements OnInit {
+export class TamanhoFormComponent implements OnInit {
 
   objeto: Tamanho;
 
@@ -40,7 +40,7 @@ export class TamanhoComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('ingrediente');
+      this.router.navigateByUrl('tamanho');
     }, erro => {
       this.messageService.add({
         severity: 'error',

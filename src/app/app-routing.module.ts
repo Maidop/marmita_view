@@ -9,7 +9,7 @@ import {ClienteListComponent} from "./cliente/cliente-list.component";
 import {ClienteFormComponent} from "./cliente/cliente-form.component";
 import {CardapioListComponent} from "./cardapio/cardapio-list.component";
 import {CardapioFormComponent} from "./cardapio/cardapio-form.component";
-import {TamanhoComponent} from "./tamanho/tamanho.component";
+import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
 import {TamanhoListComponent} from "./tamanho/tamanho-list.component";
 
 
@@ -45,7 +45,7 @@ const routes: Routes = [
     path: 'tamanho', component: TamanhoListComponent
   },
   {
-    path: 'tamanho/form', component: TamanhoComponent
+    path: 'tamanho/form', component: TamanhoFormComponent
   }
 ];
 
