@@ -18,7 +18,8 @@ import {
     PanelMenuModule,
     SidebarModule,
     TableModule,
-    ToastModule, DropdownModule
+    ToastModule,
+    DropdownModule
 } from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -83,6 +84,25 @@ import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
         MultiSelectModule,
         DropdownModule,
     ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    ToastModule,
+    SidebarModule,
+    MenuModule,
+    BrowserAnimationsModule,
+    CardModule,
+    TableModule,
+    ConfirmDialogModule,
+    HttpClientModule,
+    PanelMenuModule,
+    FormsModule,
+    InputTextModule,
+    CheckboxModule,
+    DialogModule,
+    MultiSelectModule,
+  ],
   providers: [
     SidebarService,
     MessageService,
