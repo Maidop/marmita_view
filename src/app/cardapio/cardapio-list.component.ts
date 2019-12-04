@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {ListComponent} from '../component/list.component';
+import {Cardapio} from './Cardapio';
+import {CardapioService} from '../service/cardapio.service';
 import {ConfirmationService, MessageService} from 'primeng';
 import {Title} from '@angular/platform-browser';
-import {ListComponent} from '../component/list.component';
-import {Cliente} from './cliente';
-import {ClienteService} from '../service/cliente.service';
 
 @Component({
-  selector: 'app-cliente-list',
-  templateUrl: './cliente-list.component.html',
-  styleUrls: ['./cliente-list.component.scss']
+  selector: 'app-cardapio-list',
+  templateUrl: './cardapio-list.component.html',
+  styleUrls: ['./cardapio-list.component.scss']
 })
-export class ClienteListComponent extends ListComponent<Cliente> implements OnInit {
+export class CardapioListComponent extends ListComponent<Cardapio> implements OnInit {
 
-  constructor(private clienteService: ClienteService,
+  constructor(private cardapioService: CardapioService,
               private messageService: MessageService,
               private confirmationService: ConfirmationService,
               private titleService: Title) {
@@ -27,7 +27,7 @@ export class ClienteListComponent extends ListComponent<Cliente> implements OnIn
 
   carregarLista(): void {
     this.loading = true;
-    this.clienteService.findAll().subscribe(res => {
+    this.cardapioService.findAll().subscribe(res => {
       this.lista = res;
       setTimeout(() => this.loading = false);
     });
@@ -35,7 +35,7 @@ export class ClienteListComponent extends ListComponent<Cliente> implements OnIn
 
   excluir(id: number): void {
     this.confirmationService.confirm({
-      message: 'Você tem certeza que deseja excluir esse cliente?',
+      message: 'Você tem certeza que deseja excluir esse cardapio?',
       accept: () => this.deletar(id),
       acceptLabel: 'SIM',
       rejectLabel: 'NÃO',
@@ -44,7 +44,7 @@ export class ClienteListComponent extends ListComponent<Cliente> implements OnIn
 
   private deletar(id: number): void {
     this.loading = true;
-    this.clienteService.delete(id).subscribe(() => {
+    this.cardapioService.delete(id).subscribe(() => {
       this.carregarLista();
 
       this.messageService.add({

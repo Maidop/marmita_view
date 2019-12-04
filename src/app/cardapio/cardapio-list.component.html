@@ -1,6 +1,6 @@
-<p-card header="Lista de Comidas">
+<p-card header="Lista de Cardapios">
   <div class="text-right m-2">
-    <button [routerLink]="['/comida/form']"
+    <button [routerLink]="['/cardapio/form']"
             class="ui-button-raised"
             label="Novo"
             pButton
@@ -18,7 +18,7 @@
     <ng-template pTemplate="body" let-objeto>
       <tr class="text-center">
         <td>{{objeto.id}}</td>
-        <td>{{objeto.comida}}</td>
+        <td>{{objeto.cardapio}}</td>
         <td>{{objeto.inativo}}</td>
         <td>
           <i [queryParams]="{id: objeto['id']}"
@@ -32,7 +32,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-      {{lista?.length}} comidas.
+      {{lista?.length}} cardapios.
     </ng-template>
   </p-table>
 </p-card>

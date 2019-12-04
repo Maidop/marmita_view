@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ComidaService} from '../service/comida.service';
 import {MessageService} from 'primeng';
-import {Comida} from './comida';
-
-
+import {Cardapio} from './Cardapio';
+import {CardapioService} from '../service/cardapio.service';
 
 @Component({
-  selector: 'app-comida-form',
-  templateUrl: './comida-form.component.html',
-  styleUrls: ['./comida-form.component.scss']
+  selector: 'app-cardapio-form',
+  templateUrl: './cardapio-form.component.html',
+  styleUrls: ['./cardapio-form.component.scss']
 })
-export class ComidaFormComponent implements OnInit {
+export class CardapioFormComponent implements OnInit {
 
-  objeto: Comida;
+  objeto: Cardapio;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private comidaService: ComidaService,
+              private cardapioService: CardapioService,
               private router: Router,
               private messageService: MessageService) {
   }
@@ -24,7 +22,7 @@ export class ComidaFormComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(params => {
       if (params.has('id')) {
-        this.comidaService.findOne(parseInt(params.get('id'))).subscribe(res => {
+        this.cardapioService.findOne(parseInt(params.get('id'))).subscribe(res => {
           this.objeto = res;
         });
       } else {
@@ -34,7 +32,7 @@ export class ComidaFormComponent implements OnInit {
   }
 
   salvar(): void {
-    this.comidaService.save(this.objeto).subscribe(res => {
+    this.cardapioService.save(this.objeto).subscribe(res => {
       this.objeto = res;
 
       this.messageService.add({
@@ -42,7 +40,7 @@ export class ComidaFormComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('ingrediente');
+      this.router.navigateByUrl('cliente');
     }, erro => {
       this.messageService.add({
         severity: 'error',
@@ -52,8 +50,7 @@ export class ComidaFormComponent implements OnInit {
   }
 
   private resetaForm(): void {
-    this.objeto = new Comida();
+    this.objeto = new Cardapio();
   }
 
 }
-
