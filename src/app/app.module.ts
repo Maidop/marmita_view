@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {
   ButtonModule,
-  CardModule, CheckboxModule,
+  CardModule,
   ConfirmationService,
   ConfirmDialogModule, InputTextModule,
   MenuModule,
@@ -22,11 +22,11 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpRequestInterceptor} from './congif/http-request.interceptor';
 import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {FormsModule} from '@angular/forms';
+import {ComidaFormComponent} from "./comida/comida-form.component";
+import {ComidaListComponent} from "./comida/comida-list.component";
 
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
-import {ComidaFormComponent} from './comida/comida-form.component';
-import {ComidaListComponent} from './comida/comida-list.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,6 @@ import {ComidaListComponent} from './comida/comida-list.component';
     PanelMenuModule,
     FormsModule,
     InputTextModule,
-    CheckboxModule,
   ],
   providers: [
     SidebarService,
