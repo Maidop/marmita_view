@@ -10,7 +10,7 @@ import {
   ConfirmationService,
   ConfirmDialogModule, DialogModule, InputTextModule,
   MenuModule,
-  MessageService, PanelMenuModule,
+  MessageService, MultiSelectModule, PanelMenuModule,
   SidebarModule,
   TableModule,
   ToastModule
@@ -62,6 +62,7 @@ import {LoginComponent} from './login/login.component';
     InputTextModule,
     CheckboxModule,
     DialogModule,
+    MultiSelectModule,
   ],
   providers: [
     SidebarService,

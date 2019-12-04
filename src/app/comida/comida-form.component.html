@@ -22,6 +22,11 @@
           <p-checkbox [(ngModel)]="objeto.inativo" binary="true" label="Inativo"></p-checkbox>
         </span>
       </div>
+      <div class="col-12">
+        <span class="ui-float-label my-2">
+            <p-multiSelect optionLabel="ingredientes" [options]="ingredienteList" [(ngModel)]="selectedIngredientes1"></p-multiSelect>
+        </span>
+      </div>
     </div>
   </div>
 </p-card>
