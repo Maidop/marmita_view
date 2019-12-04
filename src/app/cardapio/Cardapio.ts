@@ -1,5 +1,5 @@
 export class Cardapio {
   id: number;
   cardapio: string;
-  inativo: boolean = false;
+  inativo: boolean;
 }

@@ -22,14 +22,14 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpRequestInterceptor} from './config/http-request.interceptor';
 import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {FormsModule} from '@angular/forms';
-import {ComidaFormComponent} from "./comida/comida-form.component";
-import {ComidaListComponent} from "./comida/comida-list.component";
+import {ComidaFormComponent} from './comida/comida-form.component';
+import {ComidaListComponent} from './comida/comida-list.component';
+import { CardapioFormComponent } from './cardapio/cardapio-form.component';
 
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
-import {CardapioListComponent} from "./cardapio/cardapio-list.component";
-import {CardapioFormComponent} from "./cardapio/cardapio-form.component";
-import {LoginComponent} from "./login/login.component";
+import {CardapioListComponent} from './cardapio/cardapio-list.component';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
