@@ -6,9 +6,9 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {
   ButtonModule,
-  CardModule,
+  CardModule, CheckboxModule,
   ConfirmationService,
-  ConfirmDialogModule, InputTextModule,
+  ConfirmDialogModule, DialogModule, InputTextModule,
   MenuModule,
   MessageService, PanelMenuModule,
   SidebarModule,
@@ -27,6 +27,9 @@ import {ComidaListComponent} from "./comida/comida-list.component";
 
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
+import {CardapioComponent} from "./cardapio/cardapio.component";
+import {CardapioFormComponent} from "./cardapio/cardapio-form/cardapio-form.component";
+import {LoginComponent} from "./login/login.component";
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import {ClienteListComponent} from './cliente/cliente-list.component';
     ComidaFormComponent,
     ComidaListComponent,
     ClienteFormComponent,
-    ClienteListComponent
+    ClienteListComponent,
+    CardapioComponent,
+    CardapioFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +60,8 @@ import {ClienteListComponent} from './cliente/cliente-list.component';
     PanelMenuModule,
     FormsModule,
     InputTextModule,
+    CheckboxModule,
+    DialogModule,
   ],
   providers: [
     SidebarService,
