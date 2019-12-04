@@ -6,14 +6,14 @@
     <div class="align-middle bloco">
       <div class="col">
       <span class="ui-float-label">
-        <input id="cpf" type="text" pInputText>
+        <input id="cpf" type="text" [(ngModel)]="login.cpf" pInputText>
         <label for="cpf">CPF</label>
       </span>
         <span class="ui-float-label">
-        <input id="senha" type="password" pInputText>
+        <input id="senha" type="password" [(ngModel)]="login.senha" pInputText>
         <label for="senha">Senha</label>
       </span>
-        <button pButton type="button" label="Acessar" class="ui-button-raised"></button>
+        <button pButton type="button" label="Acessar" class="ui-button-raised" (click)="logar()"></button>
       </div>
       <div>
         <span>É novo por aqui? </span><a href="#">Cadastre-se Aqui!</a>

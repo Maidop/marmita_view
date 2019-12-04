@@ -80,6 +80,7 @@ import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
     InputTextModule,
     CheckboxModule,
     DialogModule,
+    MultiSelectModule,
   ],
   providers: [
     SidebarService,
