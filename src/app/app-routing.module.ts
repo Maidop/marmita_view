@@ -7,6 +7,8 @@ import {ComidaListComponent} from "./comida/comida-list.component";
 import {ComidaFormComponent} from "./comida/comida-form.component";
 import {ClienteListComponent} from "./cliente/cliente-list.component";
 import {ClienteFormComponent} from "./cliente/cliente-form.component";
+import {CardapioComponent} from "./cardapio/cardapio.component";
+import {CardapioFormComponent} from "./cardapio/cardapio-form/cardapio-form.component";
 
 
 const routes: Routes = [
@@ -30,6 +32,12 @@ const routes: Routes = [
   },
   {
     path: 'cliente/form', component: ClienteFormComponent
+  },
+  {
+    path: 'cardapio', component: CardapioComponent
+  },
+  {
+    path: 'cardapio/form', component: CardapioFormComponent
   }
 ];
 

@@ -36,6 +36,11 @@ export class AppComponent implements OnInit {
               label: 'Cliente',
               routerLink: '/cliente',
               icon: '',
+            },
+            {
+              label: 'Cardapio',
+              routerLink: '/cardapio',
+              icon: '',
             }
         ]
       }
