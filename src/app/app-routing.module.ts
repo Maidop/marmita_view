@@ -11,6 +11,8 @@ import {CardapioListComponent} from "./cardapio/cardapio-list.component";
 import {CardapioFormComponent} from "./cardapio/cardapio-form.component";
 import {TipoComidaListComponent} from "./tipo-comida/tipo-comida-list.component";
 import {TipoComidaFormComponent} from "./tipo-comida/tipo-comida-form.component";
+import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
+import {TamanhoListComponent} from "./tamanho/tamanho-list.component";
 
 
 const routes: Routes = [
@@ -46,6 +48,12 @@ const routes: Routes = [
   },
   {
     path: 'cardapio/form', component: CardapioFormComponent
+  } ,
+  {
+    path: 'tamanho', component: TamanhoListComponent
+  },
+  {
+    path: 'tamanho/form', component: TamanhoFormComponent
   }
 ];
 

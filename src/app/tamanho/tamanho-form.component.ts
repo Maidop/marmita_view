@@ -1,20 +1,20 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {MessageService} from 'primeng';
-import {Cardapio} from './Cardapio';
-import {CardapioService} from '../service/cardapio.service';
+import {ActivatedRoute, Router} from "@angular/router";
+import {MessageService} from "primeng";
+import {Tamanho} from "./tamanho";
+import {TamanhoService} from "../service/tamanho.service";
 
 @Component({
-  selector: 'app-cardapio-form',
-  templateUrl: './cardapio-form.component.html',
-  styleUrls: ['./cardapio-form.component.scss']
+  selector: 'app-tamanho',
+  templateUrl: './tamanho-form.component.html',
+  styleUrls: ['./tamanho-form.component.scss']
 })
-export class CardapioFormComponent implements OnInit {
+export class TamanhoFormComponent implements OnInit {
 
-  objeto: Cardapio;
+  objeto: Tamanho;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private cardapioService: CardapioService,
+              private tamanhoService: TamanhoService,
               private router: Router,
               private messageService: MessageService) {
   }
@@ -22,7 +22,7 @@ export class CardapioFormComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(params => {
       if (params.has('id')) {
-        this.cardapioService.findOne(parseInt(params.get('id'))).subscribe(res => {
+        this.tamanhoService.findOne(parseInt(params.get('id'))).subscribe(res => {
           this.objeto = res;
         });
       } else {
@@ -32,7 +32,7 @@ export class CardapioFormComponent implements OnInit {
   }
 
   salvar(): void {
-    this.cardapioService.save(this.objeto).subscribe(res => {
+    this.tamanhoService.save(this.objeto).subscribe(res => {
       this.objeto = res;
 
       this.messageService.add({
@@ -40,7 +40,7 @@ export class CardapioFormComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('cardapio');
+      this.router.navigateByUrl('tamanho');
     }, erro => {
       this.messageService.add({
         severity: 'error',
@@ -50,7 +50,7 @@ export class CardapioFormComponent implements OnInit {
   }
 
   private resetaForm(): void {
-    this.objeto = new Cardapio();
+    this.objeto = new Tamanho();
   }
 
 }

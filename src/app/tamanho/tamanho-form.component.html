@@ -1,4 +1,4 @@
-<p-card header="Cadastrar Comida">
+<p-card header="Cadastrar Tamanho">
   <div class="text-right m-2">
     <button (click)="salvar()"
             class="ui-button-raised"
@@ -10,11 +10,11 @@
     <div class="row">
       <div class="col-12">
         <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.comida"
+            <input [(ngModel)]="objeto.peso"
                    id="descricao"
                    pInputText
                    type="text">
-            <label for="descricao">Comida</label>
+            <label for="descricao">Peso</label>
         </span>
       </div>
       <div class="col-12">
@@ -22,12 +22,6 @@
           <p-checkbox [(ngModel)]="objeto.inativo" binary="true" label="Inativo"></p-checkbox>
         </span>
       </div>
-      <div class="col-12">
-        <span class="ui-float-label my-2">
-            <p-multiSelect defaultLabel="Ingredientes" optionLabel="ingredientes" [options]="ingredienteList" [(ngModel)]="selectedIngredientes1"></p-multiSelect>
-        </span>
-      </div>
     </div>
   </div>
 </p-card>
-
