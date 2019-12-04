@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {MessageService} from "primeng";
-import {Comida} from "./comida";
-import {ComidaService} from "../service/comida.service";
+import {ActivatedRoute, Router} from '@angular/router';
+import {ComidaService} from '../service/comida.service';
+import {MessageService} from 'primeng';
+import {Comida} from './comida';
+
+
 
 @Component({
   selector: 'app-comida-form',
@@ -51,7 +53,6 @@ export class ComidaFormComponent implements OnInit {
 
   private resetaForm(): void {
     this.objeto = new Comida();
-    this.objeto.comida = '';
   }
 
 }

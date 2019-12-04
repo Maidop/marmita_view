@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+import {ComidaService} from '../service/comida.service';
 import {ListComponent} from '../component/list.component';
 import {Comida} from './comida';
-import {ComidaService} from '../service/comida.service';
 import {ConfirmationService, MessageService} from 'primeng';
 import {Title} from '@angular/platform-browser';
 
@@ -10,7 +11,7 @@ import {Title} from '@angular/platform-browser';
   templateUrl: './comida-list.component.html',
   styleUrls: ['./comida-list.component.scss']
 })
-export class ComidaListComponent  extends ListComponent<Comida>  implements OnInit {
+export class ComidaListComponent extends ListComponent<Comida> implements OnInit {
 
   constructor(private comidaService: ComidaService,
               private messageService: MessageService,
@@ -20,7 +21,8 @@ export class ComidaListComponent  extends ListComponent<Comida>  implements OnIn
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Lista de Comida');
+    this.titleService.setTitle('Lista de Comidas');
+    this.carregarLista();
   }
 
   carregarLista(): void {
@@ -58,6 +60,5 @@ export class ComidaListComponent  extends ListComponent<Comida>  implements OnIn
       setTimeout(() => this.loading = false);
     });
   }
-
 
 }
