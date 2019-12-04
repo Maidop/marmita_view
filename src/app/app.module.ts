@@ -8,9 +8,11 @@ import {
   ButtonModule,
   CardModule, CheckboxModule,
   ConfirmationService,
-  ConfirmDialogModule, DialogModule, InputTextModule,
+  ConfirmDialogModule, DialogModule,
+  InputTextModule,
   MenuModule,
-  MessageService, PanelMenuModule,
+  MessageService,
+  PanelMenuModule,
   SidebarModule,
   TableModule,
   ToastModule
@@ -25,10 +27,8 @@ import {FormsModule} from '@angular/forms';
 import {ComidaFormComponent} from "./comida/comida-form.component";
 import {ComidaListComponent} from "./comida/comida-list.component";
 
-import { ClienteFormComponent } from './cliente/cliente-form.component';
+import {ClienteFormComponent} from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
-import {CardapioComponent} from "./cardapio/cardapio.component";
-import {CardapioFormComponent} from "./cardapio/cardapio-form/cardapio-form.component";
 import {CardapioComponent} from "./cardapio/cardapio.component";
 import {CardapioFormComponent} from "./cardapio/cardapio-form/cardapio-form.component";
 import {LoginComponent} from "./login/login.component";
@@ -44,7 +44,7 @@ import {LoginComponent} from "./login/login.component";
     ClienteFormComponent,
     ClienteListComponent,
     CardapioComponent,
-    CardapioFormComponent
+    CardapioFormComponent,
     ClienteListComponent,
     CardapioComponent,
     CardapioFormComponent,
@@ -65,6 +65,8 @@ import {LoginComponent} from "./login/login.component";
     PanelMenuModule,
     FormsModule,
     InputTextModule,
+    CheckboxModule,
+    DialogModule,
   ],
   providers: [
     SidebarService,
