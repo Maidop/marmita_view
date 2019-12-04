@@ -30,6 +30,8 @@ import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
 import {CardapioListComponent} from './cardapio/cardapio-list.component';
 import {LoginComponent} from './login/login.component';
+import {TamanhoListComponent} from "./tamanho/tamanho-list.component";
+import {TamanhoComponent} from "./tamanho/tamanho.component";
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {LoginComponent} from './login/login.component';
     ClienteListComponent,
     CardapioListComponent,
     CardapioFormComponent,
-    LoginComponent
+    LoginComponent,
+    TamanhoListComponent,
+    TamanhoComponent
   ],
   imports: [
     BrowserModule,
