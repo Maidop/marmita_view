@@ -37,10 +37,9 @@ import {ClienteListComponent} from './cliente/cliente-list.component';
 import {CardapioListComponent} from './cardapio/cardapio-list.component';
 import {LoginComponent} from './login/login.component';
 import { TipoComidaListComponent } from './tipo-comida/tipo-comida-list.component';
-import {TipoComidaFormComponent} from "./tipo-comida/tipo-comida-form.component";
-
-import {TamanhoListComponent} from "./tamanho/tamanho-list.component";
-import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
+import {TipoComidaFormComponent} from './tipo-comida/tipo-comida-form.component';
+import {TamanhoListComponent} from './tamanho/tamanho-list.component';
+import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
 
 @NgModule({
   declarations: [
@@ -84,25 +83,6 @@ import {TamanhoFormComponent} from "./tamanho/tamanho-form.component";
         MultiSelectModule,
         DropdownModule,
     ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ButtonModule,
-    ToastModule,
-    SidebarModule,
-    MenuModule,
-    BrowserAnimationsModule,
-    CardModule,
-    TableModule,
-    ConfirmDialogModule,
-    HttpClientModule,
-    PanelMenuModule,
-    FormsModule,
-    InputTextModule,
-    CheckboxModule,
-    DialogModule,
-    MultiSelectModule,
-  ],
   providers: [
     SidebarService,
     MessageService,
