@@ -19,7 +19,9 @@
       <tr class="text-center">
         <td>{{objeto.id}}</td>
         <td>{{objeto.ingredientes}}</td>
-        <td>{{objeto.inativo}}</td>
+        <td>
+          <p-checkbox disabled="true" [(ngModel)]="objeto.inativo" binary="true"></p-checkbox>
+        </td>
         <td>
           <i [queryParams]="{id: objeto['id']}"
              [routerLink]="['form']"
