@@ -40,7 +40,7 @@ export class CardapioFormComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('cliente');
+      this.router.navigateByUrl('cardapio');
     }, erro => {
       this.messageService.add({
         severity: 'error',

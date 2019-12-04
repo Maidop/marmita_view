@@ -10,7 +10,7 @@ import {
   ConfirmationService,
   ConfirmDialogModule, DialogModule, InputTextModule,
   MenuModule,
-  MessageService, PanelMenuModule,
+  MessageService, MultiSelectModule, PanelMenuModule,
   SidebarModule,
   TableModule,
   ToastModule
@@ -66,6 +66,7 @@ import {TamanhoComponent} from "./tamanho/tamanho.component";
     InputTextModule,
     CheckboxModule,
     DialogModule,
+    MultiSelectModule,
   ],
   providers: [
     SidebarService,

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ComidaService} from '../service/comida.service';
-import {MessageService} from 'primeng';
+import {MessageService, SelectItem} from 'primeng';
 import {Comida} from './comida';
+import {Ingrediente} from '../ingrediente/ingrediente';
+import {IngredienteService} from '../service/ingrediente.service';
+import {ComidaIngrediente} from './comidaIngrediente';
 
 
 
@@ -14,11 +17,17 @@ import {Comida} from './comida';
 export class ComidaFormComponent implements OnInit {
 
   objeto: Comida;
+  ingredienteList: Ingrediente[];
+  selectedIngredientes1: Ingrediente[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
               private comidaService: ComidaService,
               private router: Router,
-              private messageService: MessageService) {
+              private messageService: MessageService,
+              private ingredienteService: IngredienteService) {
+    this.ingredienteService.findAll().subscribe(res => {
+      this.ingredienteList = res;
+    });
   }
 
   ngOnInit() {
@@ -26,6 +35,10 @@ export class ComidaFormComponent implements OnInit {
       if (params.has('id')) {
         this.comidaService.findOne(parseInt(params.get('id'))).subscribe(res => {
           this.objeto = res;
+          this.selectedIngredientes1 = [];
+          for (const comidaIngrediente of this.objeto.ingredientesList) {
+            this.selectedIngredientes1.push(comidaIngrediente.ingrediente);
+          }
         });
       } else {
         this.resetaForm();
@@ -34,6 +47,12 @@ export class ComidaFormComponent implements OnInit {
   }
 
   salvar(): void {
+    this.objeto.ingredientesList = [];
+    for (const ingrediente of this.selectedIngredientes1) {
+      const comidaIngrediente = new ComidaIngrediente();
+      comidaIngrediente.ingrediente = ingrediente;
+      this.objeto.ingredientesList.push(comidaIngrediente);
+    }
     this.comidaService.save(this.objeto).subscribe(res => {
       this.objeto = res;
 
@@ -42,7 +61,7 @@ export class ComidaFormComponent implements OnInit {
         summary: 'Salvo com sucesso!'
       });
 
-      this.router.navigateByUrl('ingrediente');
+      this.router.navigateByUrl('comida');
     }, erro => {
       this.messageService.add({
         severity: 'error',
