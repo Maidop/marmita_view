@@ -20,9 +20,9 @@ export class AppComponent implements OnInit {
         icon: 'pi pi-home'
       },
         {
-          label: 'Cadastros',  //routerLink: '/ingrediente',
+          label: 'Cadastros',
           icon: '',
-          items:[
+          items: [
             {
               label: 'Ingredientes',
               routerLink: '/ingrediente',
@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
               icon: '',
             },
             {
-              label: 'Tamanho da comida',
+              label: 'Tamanhos',
               routerLink: 'tamanho',
               icon: ''
             }
