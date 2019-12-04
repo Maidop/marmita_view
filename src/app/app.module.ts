@@ -19,7 +19,7 @@ import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngredienteListComponent} from './ingrediente/ingrediente-list.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {HttpRequestInterceptor} from './congif/http-request.interceptor';
+import {HttpRequestInterceptor} from './config/http-request.interceptor';
 import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {FormsModule} from '@angular/forms';
 import {ComidaFormComponent} from "./comida/comida-form.component";
