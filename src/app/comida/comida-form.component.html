@@ -28,6 +28,12 @@
             <p-multiSelect defaultLabel="Selecione" optionLabel="ingredientes" [options]="ingredienteList" [(ngModel)]="selectedIngredientes1"></p-multiSelect>
         </span>
       </div>
+      <div class="col-12">
+        <span class="ui-float-label my-2">
+          <p>Tipo</p>
+          <p-dropdown placeholder="Selecione" [filter]="true" [options]="tipoComida" [(ngModel)]="selectedTipo1"></p-dropdown>
+        </span>
+      </div>
     </div>
   </div>
 </p-card>
