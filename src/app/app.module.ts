@@ -32,7 +32,9 @@ import {ClienteFormComponent} from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
 import {CardapioListComponent} from './cardapio/cardapio-list.component';
 import {LoginComponent} from './login/login.component';
-import { TipoComidaComponent } from './tipo-comida/tipo-comida.component';
+import { TipoComidaListComponent } from './tipo-comida/tipo-comida-list.component';
+import {TipoComidaFormComponent} from "./tipo-comida/tipo-comida-form.component";
+
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { TipoComidaComponent } from './tipo-comida/tipo-comida.component';
     CardapioListComponent,
     CardapioFormComponent,
     LoginComponent,
-    TipoComidaComponent
+    TipoComidaListComponent,
+    TipoComidaFormComponent
   ],
   imports: [
     BrowserModule,

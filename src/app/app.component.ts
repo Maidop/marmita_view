@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
               icon: '',
             },
             {
+              label: 'Tipo de Comida',
+              routerLink: '/tipo-comida',
+            },
+            {
               label: 'Comidas',
               routerLink: '/comida',
             },
