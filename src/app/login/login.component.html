@@ -1,0 +1,23 @@
+<p-dialog [style]="{width: '400px'}"
+          [title]="titulo"
+          [(visible)]="displayItem"
+          (onHide)="this.onClose.emit()">
+  <div class="container">
+    <div class="align-middle bloco">
+      <div class="col">
+      <span class="ui-float-label">
+        <input id="cpf" type="text" pInputText>
+        <label for="cpf">CPF</label>
+      </span>
+        <span class="ui-float-label">
+        <input id="senha" type="password" pInputText>
+        <label for="senha">Senha</label>
+      </span>
+        <button pButton type="button" label="Acessar" class="ui-button-raised"></button>
+      </div>
+      <div>
+        <span>É novo por aqui? </span><a href="#">Cadastre-se Aqui!</a>
+      </div>
+    </div>
+  </div>
+</p-dialog>

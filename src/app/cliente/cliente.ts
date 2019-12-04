@@ -5,7 +5,7 @@ export class Cliente {
   telefone: string;
   senha: string;
   cep: string;
-  logadouro: string;
+  logradouro: string;
   numero: number;
   bairro: string;
 }

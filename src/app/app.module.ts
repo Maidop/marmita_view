@@ -27,8 +27,6 @@ import {ComidaListComponent} from "./comida/comida-list.component";
 
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
-import { CardapioComponent } from './cardapio/cardapio.component';
-import { CardapioFormComponent } from './cardapio/cardapio-form/cardapio-form.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +37,7 @@ import { CardapioFormComponent } from './cardapio/cardapio-form/cardapio-form.co
     ComidaFormComponent,
     ComidaListComponent,
     ClienteFormComponent,
-    ClienteListComponent,
-    CardapioComponent,
-    CardapioFormComponent
+    ClienteListComponent
   ],
   imports: [
     BrowserModule,

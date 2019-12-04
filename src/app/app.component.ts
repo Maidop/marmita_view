@@ -9,8 +9,8 @@ import {MenuItem} from 'primeng';
 })
 export class AppComponent implements OnInit {
   title = 'marmitex';
-  displaySidebar: boolean;
   menuList: MenuItem[];
+  displayItem = false;
 
   constructor(private sidebarService: SidebarService) {
     this.menuList = [
@@ -50,8 +50,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  abrirFecharMenu() {
-    this.sidebarService.setMostrar(!this.displaySidebar);
+  openModalItem() {
+    this.displayItem = true;
   }
-
 }
