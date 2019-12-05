@@ -24,7 +24,7 @@ import {
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngredienteListComponent} from './ingrediente/ingrediente-list.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {HttpRequestInterceptor} from './config/http-request.interceptor';
 import {IngredienteFormComponent} from './ingrediente/ingrediente-form.component';
 import {FormsModule} from '@angular/forms';
@@ -95,7 +95,7 @@ import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
       provide: HTTP_INTERCEPTORS,
       useClass: HttpRequestInterceptor,
       multi: true
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

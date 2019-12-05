@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SidebarService} from './service/sidebar.service';
 import {MenuItem} from 'primeng';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent implements OnInit {
   menuList: MenuItem[];
   displayItem = false;
 
-  constructor(private sidebarService: SidebarService) {
+  constructor(private sidebarService: SidebarService,
+              private http: HttpClient) {
     this.menuList = [
       {
         label: 'Início',
