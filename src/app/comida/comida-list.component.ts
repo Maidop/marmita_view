@@ -9,7 +9,7 @@ import {Title} from '@angular/platform-browser';
 @Component({
   selector: 'app-comida-list',
   templateUrl: './comida-list.component.html',
-  styleUrls: ['./comida-list.component.scss']
+  styleUrls: []
 })
 export class ComidaListComponent extends ListComponent<Comida> implements OnInit {
 

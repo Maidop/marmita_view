@@ -8,7 +8,7 @@ import {Title} from '@angular/platform-browser';
 @Component({
   selector: 'app-cardapio-list',
   templateUrl: './cardapio-list.component.html',
-  styleUrls: ['./cardapio-list.component.scss']
+  styleUrls: []
 })
 export class CardapioListComponent extends ListComponent<Cardapio> implements OnInit {
 

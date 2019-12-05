@@ -1,15 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {ListComponent} from "../component/list.component";
-import {Tamanho} from "./tamanho";
-import {IngredienteService} from "../service/ingrediente.service";
-import {ConfirmationService, MessageService} from "primeng";
-import {Title} from "@angular/platform-browser";
-import {TamanhoService} from "../service/tamanho.service";
+import {ListComponent} from '../component/list.component';
+import {Tamanho} from './tamanho';
+import {ConfirmationService, MessageService} from 'primeng';
+import {Title} from '@angular/platform-browser';
+import {TamanhoService} from '../service/tamanho.service';
 
 @Component({
   selector: 'app-tamanho-list',
   templateUrl: './tamanho-list.component.html',
-  styleUrls: ['./tamanho-list.component.scss']
+  styleUrls: []
 })
 export class TamanhoListComponent extends ListComponent<Tamanho> implements OnInit {
 

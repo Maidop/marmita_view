@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {MessageService} from "primeng";
-import {TipoComida} from "./tipo-comida";
-import {TipoComidaService} from "../service/tipo-comida.service";
+import {ActivatedRoute, Router} from '@angular/router';
+import {MessageService} from 'primeng';
+import {TipoComida} from './tipo-comida';
+import {TipoComidaService} from '../service/tipo-comida.service';
 
 @Component({
   selector: 'app-tipo-comida-list',
   templateUrl: './tipo-comida-form.component.html',
-  styleUrls: ['./tipo-comida-form.component.scss']
+  styleUrls: []
 })
 export class TipoComidaFormComponent implements OnInit {
 

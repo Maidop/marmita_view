@@ -7,7 +7,7 @@ import {MessageService} from 'primeng';
 @Component({
   selector: 'app-ingrediente-form',
   templateUrl: './ingrediente-form.component.html',
-  styleUrls: ['./ingrediente-form.component.scss']
+  styleUrls: []
 })
 export class IngredienteFormComponent implements OnInit {
 

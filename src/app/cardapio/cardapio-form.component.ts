@@ -7,7 +7,7 @@ import {CardapioService} from '../service/cardapio.service';
 @Component({
   selector: 'app-cardapio-form',
   templateUrl: './cardapio-form.component.html',
-  styleUrls: ['./cardapio-form.component.scss']
+  styleUrls: []
 })
 export class CardapioFormComponent implements OnInit {
 

@@ -6,7 +6,7 @@ import {HttpRequestInterceptor} from "../config/http-request.interceptor";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: []
 })
 export class LoginComponent{
   @Input() displayItem = false; // Input, para dar acesso a outro component

@@ -15,7 +15,7 @@ import {TipoComidaService} from '../service/tipo-comida.service';
 @Component({
   selector: 'app-comida-form',
   templateUrl: './comida-form.component.html',
-  styleUrls: ['./comida-form.component.scss']
+  styleUrls: []
 })
 export class ComidaFormComponent implements OnInit {
 
