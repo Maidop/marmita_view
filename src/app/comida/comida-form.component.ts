@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ComidaService} from '../service/comida.service';
-import {MessageService, SelectItem} from 'primeng';
+import {MessageService} from 'primeng';
 import {Comida} from './comida';
 import {Ingrediente} from '../ingrediente/ingrediente';
 import {IngredienteService} from '../service/ingrediente.service';
 import {ComidaIngrediente} from './comidaIngrediente';
-import {TipoComida} from '../tipo-comida/tipo-comida';
-import {Tipo} from './tipo';
 import {TipoComidaService} from '../service/tipo-comida.service';
 
 
@@ -22,8 +20,6 @@ export class ComidaFormComponent implements OnInit {
   objeto: Comida;
   ingredienteList: Ingrediente[];
   selectedIngredientes1: Ingrediente[] = [];
-  tipoComida: TipoComida[];
-  selectedTipo1: Tipo;
 
   constructor(private activatedRoute: ActivatedRoute,
               private comidaService: ComidaService,
