@@ -11,14 +11,13 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class AppComponent implements OnInit {
   title = 'marmitex';
   menuList: MenuItem[];
-  displayItem = false;
 
   constructor(private sidebarService: SidebarService,
               private http: HttpClient) {
     this.menuList = [
       {
         label: 'Início',
-        routerLink: '/',
+        routerLink: '/inicio',
         icon: 'pi pi-home'
       },
         {
@@ -61,7 +60,4 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openModalItem() {
-    this.displayItem = true;
-  }
 }
