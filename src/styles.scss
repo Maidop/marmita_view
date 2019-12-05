@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #FFCCBC!important;
+  background-color: #FFE0B2!important;
 }
 
 .cabecalho {
-  background-color: #FF5722;
+  background-color: #F57C00;
+  & .row {
+    margin-right: 0;
+  }
 }
 
 .pSidebar {
@@ -16,9 +19,26 @@ body {
 .divPrincipal {
   margin-top: 3em;
   margin-bottom: 3em;
-  height: 70vh;
+  height: 75vh;
 }
 
 .menuList {
   background-color: white;
+  width: 100%;
+  padding: 0!important;
+}
+
+.ui-panelmenu {
+  width: 100%!important;
+}
+
+.menuList .ui-panelmenu .ui-panelmenu-header.ui-state-active > a {
+  border: 1px solid #F57C00!important;
+  background-color: #F57C00!important;
+}
+
+.logoImg {
+  padding-left: 2em;
+  width: 50%;
+  height: auto;
 }

@@ -15,8 +15,7 @@ export class LoginComponent{
 
   login: Login;
 
-  constructor( private loginService: LoginService,
-               private http: HttpRequestInterceptor) {
+  constructor( private loginService: LoginService) {
     this.login = new Login();
   }
 

@@ -1,9 +1,8 @@
 <header>
   <div class="cabecalho">
-    <p-toast></p-toast>
-    <div class="row">
+    <div class="row py-2">
       <div class="col-5">
-        <a href=""><img src="src/assets/images/LogoMakr_1QoAjR.png"></a>
+        <img src="https://i.ibb.co/GC0FpYg/logo.png" class="logoImg">
       </div>
       <div class="col-6 text-right">
         <p-button icon="pi pi-user" label="Login" class="ui-button-raised"
@@ -16,16 +15,18 @@
 </header>
 <main>
   <div class="row container-fluid">
-    <div class="col-2 menuList">
-      <p-panelMenu [model]="menuList"></p-panelMenu>
+    <div class="col-2 menuList pt-2">
+      <p-panelMenu [model]="menuList" class="mt-1"></p-panelMenu>
     </div>
     <div class="col-10">
-      <div class="container divPrincipal">
+      <div class="container divPrincipal rounded">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </main>
-<footer>
-
+<footer class="container-fluid">
+<div class="d-block text-center">
+  <span class="my-1">&copy; Direitos Reservados</span>
+</div>
 </footer>
