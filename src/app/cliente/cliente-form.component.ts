@@ -3,12 +3,11 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {MessageService} from 'primeng';
 import {Cliente} from './cliente';
 import {ClienteService} from '../service/cliente.service';
-import {Ingrediente} from '../ingrediente/ingrediente';
 
 @Component({
   selector: 'app-cliente-form',
   templateUrl: './cliente-form.component.html',
-  styleUrls: ['./cliente-form.component.scss']
+  styleUrls: []
 })
 export class ClienteFormComponent implements OnInit {
 

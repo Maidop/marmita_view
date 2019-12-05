@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {MessageService} from "primeng";
-import {Tamanho} from "./tamanho";
-import {TamanhoService} from "../service/tamanho.service";
+import {ActivatedRoute, Router} from '@angular/router';
+import {MessageService} from 'primeng';
+import {Tamanho} from './tamanho';
+import {TamanhoService} from '../service/tamanho.service';
 
 @Component({
   selector: 'app-tamanho',
   templateUrl: './tamanho-form.component.html',
-  styleUrls: ['./tamanho-form.component.scss']
+  styleUrls: []
 })
 export class TamanhoFormComponent implements OnInit {
 

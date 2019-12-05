@@ -37,11 +37,11 @@
              [routerLink]="['form']"
              class="pi pi-pencil"
              title="Editar"></i>
-          <i class="pi pi-trash ml-2"
-             (click)="excluir(objeto['id'])"
-             title="Excluir"></i>
         </td>
       </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>Sem Registros.</tr>
     </ng-template>
     <ng-template pTemplate="summary">
       {{lista?.length}} clientes.

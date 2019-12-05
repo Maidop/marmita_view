@@ -8,7 +8,7 @@ import {IngredienteService} from '../service/ingrediente.service';
 @Component({
   selector: 'app-ingrediente-list',
   templateUrl: './ingrediente-list.component.html',
-  styleUrls: ['./ingrediente-list.component.scss']
+  styleUrls: []
 })
 export class IngredienteListComponent extends ListComponent<Ingrediente> implements OnInit {
 

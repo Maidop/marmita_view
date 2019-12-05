@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ComidaService} from '../service/comida.service';
-import {MessageService, SelectItem} from 'primeng';
+import {MessageService} from 'primeng';
 import {Comida} from './comida';
 import {Ingrediente} from '../ingrediente/ingrediente';
 import {IngredienteService} from '../service/ingrediente.service';
 import {ComidaIngrediente} from './comidaIngrediente';
+import {TipoComidaService} from '../service/tipo-comida.service';
 
 
 
 @Component({
   selector: 'app-comida-form',
   templateUrl: './comida-form.component.html',
-  styleUrls: ['./comida-form.component.scss']
+  styleUrls: []
 })
 export class ComidaFormComponent implements OnInit {
 
@@ -24,7 +25,8 @@ export class ComidaFormComponent implements OnInit {
               private comidaService: ComidaService,
               private router: Router,
               private messageService: MessageService,
-              private ingredienteService: IngredienteService) {
+              private ingredienteService: IngredienteService,
+              private tipoComidaService: TipoComidaService) {
     this.ingredienteService.findAll().subscribe(res => {
       this.ingredienteList = res;
     });
@@ -43,6 +45,7 @@ export class ComidaFormComponent implements OnInit {
       } else {
         this.resetaForm();
       }
+      // this.tipoComidaService.findAll().subscribe(res => this.tipoComida = res);
     });
   }
 

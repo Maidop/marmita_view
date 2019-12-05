@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {IngredienteService} from "../service/ingrediente.service";
-import {ConfirmationService, MessageService} from "primeng";
-import {Title} from "@angular/platform-browser";
-import {ListComponent} from "../component/list.component";
-import {TipoComida} from "./tipo-comida";
-import {TipoComidaService} from "../service/tipo-comida.service";
+import {ConfirmationService, MessageService} from 'primeng';
+import {Title} from '@angular/platform-browser';
+import {ListComponent} from '../component/list.component';
+import {TipoComida} from './tipo-comida';
+import {TipoComidaService} from '../service/tipo-comida.service';
 
 @Component({
   selector: 'app-tipo-comida',
   templateUrl: './tipo-comida-list.component.html',
-  styleUrls: ['./tipo-comida-list.component.scss']
+  styleUrls: []
 })
 export class TipoComidaListComponent extends ListComponent<TipoComida> implements OnInit {
 

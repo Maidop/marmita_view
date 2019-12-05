@@ -8,7 +8,7 @@ import {ClienteService} from '../service/cliente.service';
 @Component({
   selector: 'app-cliente-list',
   templateUrl: './cliente-list.component.html',
-  styleUrls: ['./cliente-list.component.scss']
+  styleUrls: []
 })
 export class ClienteListComponent extends ListComponent<Cliente> implements OnInit {
 
