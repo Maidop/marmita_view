@@ -1,31 +1,32 @@
-import {
-  HttpClient,
-  HttpEvent,
-  HttpHandler,
-  HttpHeaders,
-  HttpInterceptor,
-  HttpParams,
-  HttpRequest
-} from '@angular/common/http';
-import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {Observable} from "rxjs/internal/Observable";
+import {tap} from "rxjs/operators";
 
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
 
-  constructor(private http: HttpClient){
+  constructor(private router: Router) {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = localStorage.getItem('Authorization');
-    let authReq = req.clone({
-      headers: new HttpHeaders({
-        Authorization : `${token}`
-      })
+    let token = localStorage.getItem('Authorization');
+
+    req = req.clone({
+      withCredentials: true,
     });
 
-    return next.handle(authReq);
+    if (token && !req.headers.has('Authorization')) {
+
+      const authReqWithBearer = req.clone({
+        headers: req.headers.set('Authorization', 'Bearer ' + token),
+      });
+
+      return next.handle(authReqWithBearer);
+    }
+
+    return next.handle(req);
   }
 
 }
-
