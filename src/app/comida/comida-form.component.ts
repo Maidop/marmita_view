@@ -6,8 +6,6 @@ import {Comida} from './comida';
 import {Ingrediente} from '../ingrediente/ingrediente';
 import {IngredienteService} from '../service/ingrediente.service';
 import {ComidaIngrediente} from './comidaIngrediente';
-import {TipoComidaService} from '../service/tipo-comida.service';
-import {Tipo} from './tipo';
 import {TipoComida} from '../tipo-comida/tipo-comida';
 
 @Component({
