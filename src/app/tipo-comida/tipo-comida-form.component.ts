@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {MessageService} from 'primeng';
 import {TipoComidaService} from '../service/tipo-comida.service';
 import {TipoComida} from '../comida/tipoComida';
+import {Tipo} from './tipo';
 
 @Component({
   selector: 'app-tipo-comida-list',

@@ -5,7 +5,7 @@ import {MessageService} from 'primeng';
 import {Comida} from './comida';
 import {Ingrediente} from '../ingrediente/ingrediente';
 import {TipoComida} from './tipoComida';
-import {Tipo} from './tipo';
+import {Tipo} from '../tipo-comida/tipo';
 import {IngredienteService} from '../service/ingrediente.service';
 import {TipoComidaService} from '../service/tipo-comida.service';
 import {ComidaIngrediente} from './comidaIngrediente';
