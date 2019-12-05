@@ -3,7 +3,7 @@ import {Tipo} from './tipo';
 
 export class TipoComida {
   id: number;
-  id_comida: Comida;
-  id_tipo: Tipo;
+  comida: Comida;
+  tipo: Tipo;
 
 }

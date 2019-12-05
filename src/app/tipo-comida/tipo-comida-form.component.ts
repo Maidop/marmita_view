@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MessageService} from 'primeng';
-import {TipoComida} from './tipo-comida';
 import {TipoComidaService} from '../service/tipo-comida.service';
+import {TipoComida} from '../comida/tipoComida';
 
 @Component({
   selector: 'app-tipo-comida-list',

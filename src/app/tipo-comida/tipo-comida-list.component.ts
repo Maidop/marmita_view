@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ConfirmationService, MessageService} from 'primeng';
 import {Title} from '@angular/platform-browser';
 import {ListComponent} from '../component/list.component';
-import {TipoComida} from './tipo-comida';
 import {TipoComidaService} from '../service/tipo-comida.service';
+import {TipoComida} from '../comida/tipoComida';
 
 @Component({
   selector: 'app-tipo-comida',
