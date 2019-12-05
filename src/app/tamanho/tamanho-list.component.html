@@ -20,7 +20,9 @@
         <td>{{objeto.id}}</td>
         <td>{{objeto.peso}} Kg</td>
         <td>
-          <p-checkbox disabled="true" [(ngModel)]="objeto.inativo" binary="true"></p-checkbox>
+          <p-checkbox disabled="true"
+                      [(ngModel)]="objeto.inativo"
+                      binary="true"></p-checkbox>
         </td>
         <td>
           <i [queryParams]="{id: objeto['id']}"
