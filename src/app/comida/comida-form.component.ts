@@ -45,7 +45,7 @@ export class ComidaFormComponent implements OnInit {
       } else {
         this.resetaForm();
       }
-      this.tipoComidaService.findAll().subscribe(res => this.tipoComida = res);
+      // this.tipoComidaService.findAll().subscribe(res => this.tipoComida = res);
     });
   }
 
