@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LoginService} from "../service/login.service";
 import {Login} from "./login";
 import {HttpRequestInterceptor} from "../config/http-request.interceptor";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
