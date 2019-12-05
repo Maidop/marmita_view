@@ -7,8 +7,8 @@ import {Ingrediente} from '../ingrediente/ingrediente';
 import {IngredienteService} from '../service/ingrediente.service';
 import {ComidaIngrediente} from './comidaIngrediente';
 import {TipoComidaService} from '../service/tipo-comida.service';
-
-
+import {Tipo} from './tipo';
+import {TipoComida} from '../tipo-comida/tipo-comida';
 
 @Component({
   selector: 'app-comida-form',
@@ -18,6 +18,7 @@ import {TipoComidaService} from '../service/tipo-comida.service';
 export class ComidaFormComponent implements OnInit {
 
   objeto: Comida;
+  objeto2: TipoComida;
   ingredienteList: Ingrediente[];
   selectedIngredientes1: Ingrediente[] = [];
 
@@ -25,8 +26,7 @@ export class ComidaFormComponent implements OnInit {
               private comidaService: ComidaService,
               private router: Router,
               private messageService: MessageService,
-              private ingredienteService: IngredienteService,
-              private tipoComidaService: TipoComidaService) {
+              private ingredienteService: IngredienteService) {
     this.ingredienteService.findAll().subscribe(res => {
       this.ingredienteList = res;
     });
@@ -35,6 +35,7 @@ export class ComidaFormComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(params => {
       if (params.has('id')) {
+
         this.comidaService.findOne(parseInt(params.get('id'))).subscribe(res => {
           this.objeto = res;
           this.selectedIngredientes1 = [];
@@ -45,7 +46,6 @@ export class ComidaFormComponent implements OnInit {
       } else {
         this.resetaForm();
       }
-      // this.tipoComidaService.findAll().subscribe(res => this.tipoComida = res);
     });
   }
 
