@@ -1,4 +1,4 @@
-<p-card header="Cadastrar Cliente">
+<div class="pt-3" header="Cadastrar Cliente">
   <div class="text-right m-2">
     <button (click)="salvar()"
             class="ui-button-raised"
@@ -9,91 +9,83 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.nome"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.nome"
                    id="nome"
-                   pInputText
-                   type="text">
+                         type="text"></p-inputMask>
             <label for="nome">Cliente</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.cpf"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.cpf" mask="999.999.999-99"
                    id="cpf"
-                   pInputText
-                   type="text">
+                   type="text"></p-inputMask>
             <label for="cpf">Cpf</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.telefone"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.telefone" mask="(99) 9 9999-9999"
                    id="telefone"
-                   pInputText
-                   type="text">
+                         type="text" ></p-inputMask>
             <label for="telefone">Telefone</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.senha"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.senha"
                    id="senha"
-                   pInputText
-                   type="text">
+                         type="password"></p-inputMask>
             <label for="senha">Senha</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.cep"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.cep" mask="99999-999"
                    id="cep"
-                   pInputText
-                   type="text">
+                         type="text" ></p-inputMask>
             <label for="cep">Cep</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.logradouro"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.logradouro"
                    id="logadouro"
-                   pInputText
-                   type="text">
+                         type="text"></p-inputMask>
             <label for="logadouro">Logradouro</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.numero"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.numero"
                    id="numero"
-                   pInputText
-                   type="number">
+                         type="number"></p-inputMask>
             <label for="numero">Número</label>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-2">
-            <input [(ngModel)]="objeto.bairro"
+        <span class="ui-float-label my-3">
+            <p-inputMask [(ngModel)]="objeto.bairro"
                    id="bairro"
-                   pInputText
-                   type="text">
+                         type="text"></p-inputMask>
             <label for="bairro">Bairro</label>
         </span>
       </div>
     </div>
   </div>
-</p-card>
+</div>
