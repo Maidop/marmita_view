@@ -1,17 +1,13 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {LoginService} from "../service/login.service";
-import {Login} from "./login";
-import {HttpRequestInterceptor} from "../config/http-request.interceptor";
+import {LoginService} from '../service/login.service';
+import {Login} from './login';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: []
+  styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
-  @Input() displayItem = false; // Input, para dar acesso a outro component
-  @Output() onClose = new EventEmitter<void>();
-  titulo: "Login";
+export class LoginComponent {
 
   login: Login;
 
@@ -19,7 +15,7 @@ export class LoginComponent{
     this.login = new Login();
   }
 
-  logar(): void{
+  logar(): void {
     this.loginService.save(this.login).subscribe();
   }
 }
