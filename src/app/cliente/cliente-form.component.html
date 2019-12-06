@@ -12,7 +12,7 @@
       <div class="col-12">
         <span>
           <p>Cliente:</p>
-          <input pInputText [(ngModel)]="objeto.nome" type="text">
+          <input pInputText [(ngModel)]="objeto.nome" type="text" maxlength="100">
         </span>
       </div>
     </div>
@@ -28,7 +28,7 @@
       <div class="col-12">
         <span>
           <p>Senha:</p>
-          <input pInputText [(ngModel)]="objeto.senha" type="text">
+          <input pInputText [(ngModel)]="objeto.senha" type="password" maxlength="10">
         </span>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <div class="col-12">
       <span>
         <p>Rua:</p>
-        <input pInputText [(ngModel)]="objeto.logradouro" type="text">
+        <input pInputText [(ngModel)]="objeto.logradouro" type="text" maxlength="100">
       </span>
       </div>
     </div>
@@ -52,7 +52,7 @@
       <div class="col-12">
       <span>
         <p>Número:</p>
-        <input pInputText [(ngModel)]="objeto.numero" type="text">
+        <input pInputText [(ngModel)]="objeto.numero" type="number">
       </span>
       </div>
     </div>
@@ -60,7 +60,7 @@
       <div class="col-12">
       <span>
         <p>Bairro:</p>
-        <input pInputText [(ngModel)]="objeto.bairro" type="text">
+        <input pInputText [(ngModel)]="objeto.bairro" type="text" maxlength="100">
       </span>
       </div>
     </div>
@@ -68,7 +68,7 @@
       <div class="col-12">
       <span>
         <p>Cep:</p>
-        <input pInputText [(ngModel)]="objeto.cep" type="text">
+        <p-inputMask [(ngModel)]="objeto.cep" type="text" mask="99999-999"></p-inputMask>
       </span>
       </div>
     </div>

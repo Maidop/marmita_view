@@ -1,5 +1,5 @@
 export class Tamanho {
-  id:number;
+  id: number;
   peso: number;
   inativo: boolean;
 }

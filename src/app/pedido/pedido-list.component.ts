@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ConfirmationService, MessageService} from 'primeng';
-import {Title} from '@angular/platform-browser';
 import {ListComponent} from '../component/list.component';
 import {Pedido} from './pedido';
 import {PedidoService} from '../service/pedido.service';
+import {ConfirmationService, MessageService} from 'primeng';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pedido-list',
@@ -20,7 +20,7 @@ export class PedidoListComponent extends ListComponent<Pedido> implements OnInit
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Lista de Pedido');
+    this.titleService.setTitle('Lista de Pedidos');
     this.carregarLista();
   }
 
@@ -28,6 +28,7 @@ export class PedidoListComponent extends ListComponent<Pedido> implements OnInit
     this.loading = true;
     this.pedidoService.findAll().subscribe(res => {
       this.lista = res;
+      console.log(this.lista);
       setTimeout(() => this.loading = false);
     });
   }
