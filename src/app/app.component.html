@@ -1,7 +1,7 @@
 <header>
   <div>
     <p-menubar [model]="menuList">
-      <p-button icon="pi pi-user" label="Sair" class="ui-button-raised" (click)="logout()"></p-button>
+      <p-button icon="pi pi-user"  *ngIf="!deslogar"  label="Sair" class="ui-button-raised" (click)="logout()"></p-button>
     </p-menubar>
   </div>
 </header>
