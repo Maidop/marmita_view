@@ -14,7 +14,7 @@ export class LoginService extends BaseService<Login>{
     super(http, 'login');
   }
 
-  loggin(username: string, password: string): Observable<String> {
+  login(username: string, password: string): Observable<string> {
     const login = {
       "username": username,
       "password": password

@@ -18,7 +18,7 @@ export class LoginComponent {
   logar(): void{
     const username = this.login.cpf;
     const senha = this.login.senha;
-    this.loginService.loggin(username, senha).subscribe(res => {
+    this.loginService.login(username, senha).subscribe(res => {
       localStorage.setItem('Authorization', res);
     });
   }
