@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {BaseService} from "./base.service";
 import {Login} from "../login/login";
 import {HttpClient} from "@angular/common/http";
@@ -9,6 +9,8 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 export class LoginService extends BaseService<Login>{
+  logado: EventEmitter<boolean> = new EventEmitter<boolean>();
+  showDialog: boolean;
 
   constructor(protected http: HttpClient) {
     super(http, 'login');
@@ -21,6 +23,14 @@ export class LoginService extends BaseService<Login>{
     };
 
     return this.http.post(`${environment.api_url}login`, login, {responseType: "text"});
+  }
+
+  changeLogado(logado: boolean): void {
+    this.logado.emit(logado);
+  }
+
+  getLogado(): EventEmitter{
+    return this.logado;
   }
 
 }

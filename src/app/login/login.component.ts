@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {LoginService} from "../service/login.service";
 import {Login} from "./login";
-import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-login',
@@ -9,20 +8,12 @@ import {AppComponent} from "../app.component";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
   login: Login;
-  @Output() logar: EventEmitter<boolean> = new EventEmitter();
+
+  display: boolean = false;
 
   constructor( private loginService: LoginService) {
     this.login = new Login();
   }
 
-  logar(): void{
-    const username = this.login.cpf;
-    const senha = this.login.senha;
-    this.loginService.login(username, senha).subscribe(res => {
-      localStorage.setItem('Authorization', res);
-    });
-    this.logar.emit(true);
-  }
 }
