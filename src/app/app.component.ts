@@ -60,4 +60,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout() {
+    localStorage.removeItem("Authorization");
+  }
 }

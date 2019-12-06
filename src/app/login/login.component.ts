@@ -1,8 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {LoginService} from "../service/login.service";
 import {Login} from "./login";
-import {HttpRequestInterceptor} from "../config/http-request.interceptor";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -13,17 +11,15 @@ export class LoginComponent {
 
   login: Login;
 
-  constructor( private loginService: LoginService,
-               private httpCliente: HttpClient) {
+  constructor( private loginService: LoginService) {
     this.login = new Login();
   }
 
   logar(): void{
     const username = this.login.cpf;
     const senha = this.login.senha;
-    this.httpCliente.post<any>("http://localhost:8080/login",
-      { "username": username, "password": senha}).subscribe( data => {
-      localStorage.setItem('Authorization', JSON.stringify(data));
-    })
+    this.loginService.loggin(username, senha).subscribe(res => {
+      localStorage.setItem('Authorization', res);
+    });
   }
 }
