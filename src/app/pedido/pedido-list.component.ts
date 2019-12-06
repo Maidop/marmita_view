@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ConfirmationService, MessageService} from "primeng";
-import {Title} from "@angular/platform-browser";
-import {ListComponent} from "../component/list.component";
-import {Pedido} from "./pedido";
-import {PedidoService} from "../service/pedido.service";
+import {ConfirmationService, MessageService} from 'primeng';
+import {Title} from '@angular/platform-browser';
+import {ListComponent} from '../component/list.component';
+import {Pedido} from './pedido';
+import {PedidoService} from '../service/pedido.service';
 
 @Component({
   selector: 'app-pedido-list',

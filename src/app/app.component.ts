@@ -23,28 +23,27 @@ export class AppComponent implements OnInit {
       },
       {
         label: 'Pedido',
-        icon: '',
         items: [
           {
-            label: 'Cliente',
+            label: 'Pedidos',
+            routerLink: '/pedido',
+          },
+          {
+            label: 'Clientes',
             routerLink: '/cliente',
-            icon: '',
           },
           {
             label: 'Tamanhos do pedido',
             routerLink: 'tamanho',
-            icon: ''
           }
         ]
       },
       {
         label: 'Marmita',
-        icon: '',
         items: [
           {
             label: 'Ingredientes',
             routerLink: '/ingrediente',
-            icon: '',
           },
           {
             label: 'Comidas',
@@ -59,7 +58,6 @@ export class AppComponent implements OnInit {
       {
         label: 'cardapio teste',
         routerLink: '/cardapio',
-        icon: '',
       },
     ];
   }
