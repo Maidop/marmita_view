@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SidebarService} from './service/sidebar.service';
 import {MenuItem} from 'primeng';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -25,12 +25,12 @@ export class AppComponent implements OnInit {
         label: 'Pedido',
         items: [
           {
-            label: 'Pedidos',
-            routerLink: '/pedido',
-          },
-          {
             label: 'Clientes',
             routerLink: '/cliente',
+          },
+          {
+            label: 'Pedidos',
+            routerLink: '/pedido',
           },
           {
             label: 'Tamanhos do pedido',
@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    localStorage.removeItem("Authorization");
+    localStorage.removeItem('Authorization');
     this.deslogar.emit(false);
   }
 }

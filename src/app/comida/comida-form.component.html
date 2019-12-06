@@ -11,10 +11,11 @@
       <div class="col-12">
         <span class="ui-float-label my-2">
             <input [(ngModel)]="objeto.comida"
-                   id="descricao"
+                   id="comida"
+                   name="comida"
                    pInputText
                    type="text">
-            <label for="descricao">Comida</label>
+            <label for="comida">Comida</label>
         </span>
       </div>
       <div class="col-12">
@@ -28,20 +29,22 @@
         <span class="ui-float-label my-2">
             <p>Ingredientes</p>
             <p-multiSelect defaultLabel="Selecione"
-                           optionLabel="ingredientes"
-                           [options]="ingredienteList"
-                           [(ngModel)]="selectedIngredientes1"></p-multiSelect>
+                           [options]="ingredienteListSuggestions"
+                           [(ngModel)]="objeto.ingredientesList"></p-multiSelect>
         </span>
       </div>
-      <div class="col-12">
-        <span class="ui-float-label my-2">
-          <p>Tipo</p>
-          <p-multiSelect defaultLabel="Selecione"
-                         optionLabel="tipoComida"
-                         [options]="tipoList"
-                         [(ngModel)]="selectedTipos1"></p-multiSelect>
-        </span>
-      </div>
+<!--      <div class="col-12">-->
+<!--        <span class="ui-float-label my-2">-->
+<!--          <p>Tipo</p>-->
+<!--          <p-multiSelect defaultLabel="Selecione"-->
+<!--                         [options]="tipoList"-->
+<!--                         [(ngModel)]="selectedTipos1">-->
+<!--            <ng-template let-objeto pTemplate="item">-->
+<!--                <div>{{objeto.label}}</div>-->
+<!--            </ng-template>-->
+<!--          </p-multiSelect>-->
+<!--        </span>-->
+<!--      </div>-->
     </div>
   </div>
 </p-card>

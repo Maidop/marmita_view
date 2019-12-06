@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {LOCALE_ID, NgModule} from '@angular/core';
 
+import localePt from '@angular/common/locales/pt';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
@@ -31,7 +32,6 @@ import {FormsModule} from '@angular/forms';
 import {ComidaFormComponent} from './comida/comida-form.component';
 import {ComidaListComponent} from './comida/comida-list.component';
 import { CardapioFormComponent } from './cardapio/cardapio-form.component';
-
 import { ClienteFormComponent } from './cliente/cliente-form.component';
 import {ClienteListComponent} from './cliente/cliente-list.component';
 import {CardapioListComponent} from './cardapio/cardapio-list.component';
@@ -42,6 +42,9 @@ import {TamanhoListComponent} from './tamanho/tamanho-list.component';
 import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
 import {PedidoListComponent} from "./pedido/pedido-list.component";
 import {PedidoFormComponent} from "./pedido/pedido-form.component";
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
