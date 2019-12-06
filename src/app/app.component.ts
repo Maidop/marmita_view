@@ -29,40 +29,44 @@ export class AppComponent implements OnInit, OnDestroy {
         routerLink: '/inicio',
         icon: 'pi pi-home'
       },
-        {
-          label: 'Cadastros',
-          icon: '',
-          items: [
-            {
-              label: 'Ingredientes',
-              routerLink: '/ingrediente',
-              icon: '',
-            },
-            {
-              label: 'Tipo de Comida',
-              routerLink: '/tipo-comida',
-            },
-            {
-              label: 'Comidas',
-              routerLink: '/comida',
-            },
-            {
-              label: 'Cliente',
-              routerLink: '/cliente',
-              icon: '',
-            },
-            {
-              label: 'Cardapio',
-              routerLink: '/cardapio',
-              icon: '',
-            },
-            {
-              label: 'Tamanhos',
-              routerLink: 'tamanho',
-              icon: ''
-            }
+      {
+        label: 'Pedido',
+        items: [
+          {
+            label: 'Pedidos',
+            routerLink: '/pedido',
+          },
+          {
+            label: 'Clientes',
+            routerLink: '/cliente',
+          },
+          {
+            label: 'Tamanhos do pedido',
+            routerLink: 'tamanho',
+          }
         ]
-      }
+      },
+      {
+        label: 'Marmita',
+        items: [
+          {
+            label: 'Ingredientes',
+            routerLink: '/ingrediente',
+          },
+          {
+            label: 'Comidas',
+            routerLink: '/comida',
+          },
+          {
+            label: 'Tipos de comida',
+            routerLink: '/tipo-comida',
+          },
+        ]
+      },
+      {
+        label: 'cardapio teste',
+        routerLink: '/cardapio',
+      },
     ];
     this.subscription = this.loginService.getLogado().subscribe( logado => {
       this.usuarioEstaLogado = logado

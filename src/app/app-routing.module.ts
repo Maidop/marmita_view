@@ -14,6 +14,8 @@ import {TipoComidaFormComponent} from './tipo-comida/tipo-comida-form.component'
 import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
 import {TamanhoListComponent} from './tamanho/tamanho-list.component';
 import {LoginComponent} from './login/login.component';
+import {PedidoListComponent} from "./pedido/pedido-list.component";
+import {PedidoFormComponent} from "./pedido/pedido-form.component";
 
 
 const routes: Routes = [
@@ -58,6 +60,12 @@ const routes: Routes = [
   },
   {
     path: 'tamanho/form', component: TamanhoFormComponent
+  },
+  {
+    path: 'pedido', component: PedidoListComponent
+  },
+  {
+    path: 'pedido/form', component: PedidoFormComponent
   }
 ];
 
