@@ -5,21 +5,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {
-  ButtonModule,
-  CardModule,
-  CheckboxModule,
-  ConfirmationService,
-  ConfirmDialogModule,
-  DialogModule,
-  InputTextModule,
-  MenuModule,
-  MultiSelectModule,
-  MessageService,
-  PanelMenuModule,
-  SidebarModule,
-  TableModule,
-  ToastModule,
-  DropdownModule, InputMaskModule
+    ButtonModule,
+    CardModule,
+    CheckboxModule,
+    ConfirmationService,
+    ConfirmDialogModule,
+    DialogModule,
+    InputTextModule,
+    MenuModule,
+    MultiSelectModule,
+    MessageService,
+    PanelMenuModule,
+    SidebarModule,
+    TableModule,
+    ToastModule,
+    DropdownModule, InputMaskModule, MenubarModule
 } from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -82,7 +82,8 @@ import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
         DialogModule,
         MultiSelectModule,
         DropdownModule,
-      InputMaskModule
+        InputMaskModule,
+        MenubarModule
     ],
   providers: [
     SidebarService,
