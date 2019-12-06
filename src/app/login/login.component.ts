@@ -11,7 +11,6 @@ import {AppComponent} from "../app.component";
 export class LoginComponent {
 
   login: Login;
-  @Output() logar: EventEmitter<boolean> = new EventEmitter();
 
   constructor( private loginService: LoginService) {
     this.login = new Login();
@@ -23,6 +22,5 @@ export class LoginComponent {
     this.loginService.login(username, senha).subscribe(res => {
       localStorage.setItem('Authorization', res);
     });
-    this.logar.emit(true);
   }
 }
