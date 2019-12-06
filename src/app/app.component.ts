@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SidebarService} from './service/sidebar.service';
 import {MenuItem} from 'primeng';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
@@ -11,6 +11,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class AppComponent implements OnInit {
   title = 'marmitex';
   menuList: MenuItem[];
+  @Output() deslogar: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private sidebarService: SidebarService,
               private http: HttpClient) {
@@ -68,5 +69,6 @@ export class AppComponent implements OnInit {
 
   logout() {
     localStorage.removeItem("Authorization");
+    this.deslogar.emit(false);
   }
 }
