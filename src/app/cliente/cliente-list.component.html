@@ -1,7 +1,7 @@
 <p-card header="Lista de Clientes">
   <div class="text-right m-2">
     <button [routerLink]="['/cliente/form']"
-            class="ui-button-raised"
+            class="ui-button-secondary"
             label="Novo"
             pButton
             type="button"></button>
@@ -11,13 +11,10 @@
       <tr class="text-center">
         <th>Id</th>
         <th>Nome</th>
-        <th>Cpf</th>
         <th>Telefone</th>
-        <th>Senha</th>
-        <th>Cep</th>
-        <th>Logradouro</th>
-        <th>Número</th>
         <th>Bairro</th>
+        <th>Rua</th>
+        <th>Número</th>
         <th>Ações</th>
       </tr>
     </ng-template>
@@ -25,13 +22,10 @@
       <tr class="text-center">
         <td>{{objeto.id}}</td>
         <td>{{objeto.nome}}</td>
-        <td>{{objeto.cpf}}</td>
         <td>{{objeto.telefone}}</td>
-        <td>{{objeto.senha}}</td>
-        <td>{{objeto.cep}}</td>
+        <td>{{objeto.bairro}}</td>
         <td>{{objeto.logradouro}}</td>
         <td>{{objeto.numero}}</td>
-        <td>{{objeto.bairro}}</td>
         <td>
           <i [queryParams]="{id: objeto['id']}"
              [routerLink]="['form']"
