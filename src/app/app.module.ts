@@ -19,7 +19,7 @@ import {
   SidebarModule,
   TableModule,
   ToastModule,
-  DropdownModule, InputMaskModule
+  DropdownModule, InputMaskModule, CalendarModule
 } from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -40,6 +40,8 @@ import { TipoComidaListComponent } from './tipo-comida/tipo-comida-list.componen
 import {TipoComidaFormComponent} from './tipo-comida/tipo-comida-form.component';
 import {TamanhoListComponent} from './tamanho/tamanho-list.component';
 import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
+import {PedidoListComponent} from "./pedido/pedido-list.component";
+import {PedidoFormComponent} from "./pedido/pedido-form.component";
 
 @NgModule({
   declarations: [
@@ -61,33 +63,40 @@ import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
     TipoComidaFormComponent,
     LoginComponent,
     TamanhoListComponent,
-    TamanhoFormComponent
+    TamanhoFormComponent,
+    PedidoListComponent,
+    PedidoFormComponent,
+
+
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ButtonModule,
-        ToastModule,
-        SidebarModule,
-        MenuModule,
-        BrowserAnimationsModule,
-        CardModule,
-        TableModule,
-        ConfirmDialogModule,
-        HttpClientModule,
-        PanelMenuModule,
-        FormsModule,
-        InputTextModule,
-        CheckboxModule,
-        DialogModule,
-        MultiSelectModule,
-        DropdownModule,
-      InputMaskModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    ToastModule,
+    SidebarModule,
+    MenuModule,
+    BrowserAnimationsModule,
+    CardModule,
+    TableModule,
+    ConfirmDialogModule,
+    HttpClientModule,
+    PanelMenuModule,
+    FormsModule,
+    InputTextModule,
+    CheckboxModule,
+    DialogModule,
+    MultiSelectModule,
+    DropdownModule,
+    InputMaskModule,
+    CalendarModule,
+
+  ],
   providers: [
     SidebarService,
     MessageService,
     ConfirmationService,
+
     {
       provide: LOCALE_ID,
       useValue: 'pt'
