@@ -1,91 +1,76 @@
-<div class="pt-3" header="Cadastrar Cliente">
+<p-card header="Cadastro de Clientes">
   <div class="text-right m-2">
     <button (click)="salvar()"
-            class="ui-button-raised"
+            class="ui-button-secondary"
             label="Salvar"
             pButton
             type="button"></button>
   </div>
   <div class="container">
+
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.nome"
-                   id="nome"
-                         type="text"></p-inputMask>
-            <label for="nome">Cliente</label>
+        <span>
+          <p>Cliente:</p>
+          <input pInputText [(ngModel)]="objeto.nome" type="text">
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.cpf" mask="999.999.999-99"
-                   id="cpf"
-                   type="text"></p-inputMask>
-            <label for="cpf">Cpf</label>
+        <span>
+          <p>Cpf:</p>
+          <p-inputMask [(ngModel)]="objeto.cpf" type="text" mask="999-999-999-99"></p-inputMask>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.telefone" mask="(99) 9 9999-9999"
-                   id="telefone"
-                         type="text" ></p-inputMask>
-            <label for="telefone">Telefone</label>
+        <span>
+          <p>Senha:</p>
+          <input pInputText [(ngModel)]="objeto.senha" type="text">
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.senha"
-                   id="senha"
-                         type="password"></p-inputMask>
-            <label for="senha">Senha</label>
+        <span>
+          <p>Telefone:</p>
+          <p-inputMask [(ngModel)]="objeto.telefone" type="text" mask="(99) 99999-9999"></p-inputMask>
         </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.cep" mask="99999-999"
-                   id="cep"
-                         type="text" ></p-inputMask>
-            <label for="cep">Cep</label>
-        </span>
+      <span>
+        <p>Rua:</p>
+        <input pInputText [(ngModel)]="objeto.logradouro" type="text">
+      </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.logradouro"
-                   id="logadouro"
-                         type="text"></p-inputMask>
-            <label for="logadouro">Logradouro</label>
-        </span>
+      <span>
+        <p>Número:</p>
+        <input pInputText [(ngModel)]="objeto.numero" type="text">
+      </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.numero"
-                   id="numero"
-                         type="number"></p-inputMask>
-            <label for="numero">Número</label>
-        </span>
+      <span>
+        <p>Bairro:</p>
+        <input pInputText [(ngModel)]="objeto.bairro" type="text">
+      </span>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span class="ui-float-label my-3">
-            <p-inputMask [(ngModel)]="objeto.bairro"
-                   id="bairro"
-                         type="text"></p-inputMask>
-            <label for="bairro">Bairro</label>
-        </span>
+      <span>
+        <p>Cep:</p>
+        <input pInputText [(ngModel)]="objeto.cep" type="text">
+      </span>
       </div>
     </div>
   </div>
-</div>
+</p-card>

@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {LoginService} from "../service/login.service";
 import {Login} from "./login";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import {Login} from "./login";
 export class LoginComponent {
 
   login: Login;
+  @Output() logar: EventEmitter<boolean> = new EventEmitter();
 
   constructor( private loginService: LoginService) {
     this.login = new Login();
@@ -21,5 +23,6 @@ export class LoginComponent {
     this.loginService.login(username, senha).subscribe(res => {
       localStorage.setItem('Authorization', res);
     });
+    this.logar.emit(true);
   }
 }

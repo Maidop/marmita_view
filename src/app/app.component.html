@@ -1,29 +1,15 @@
 <header>
-  <div class="cabecalho">
-    <div class="row py-2">
-      <div class="col-5">
-        <img src="https://i.ibb.co/GC0FpYg/logo.png" class="logoImg">
-      </div>
-      <div class="col-6 text-right mt-1">
-        <p-button icon="pi pi-user" label="Sair" class="ui-button-raised" (click)="logout()"></p-button>
-      </div>
-    </div>
+  <div>
+    <p-menubar [model]="menuList">
+      <p-button icon="pi pi-user" label="Sair" styleClass="ui-button-secondary" (click)="logout()"></p-button>
+    </p-menubar>
   </div>
 </header>
+
 <main>
-  <div class="row container-fluid">
-    <div class="col-2 menuList pt-2">
-      <p-panelMenu [model]="menuList" class="mt-1"></p-panelMenu>
-    </div>
-    <div class="col-10">
-      <div class="container divPrincipal rounded">
+  <div style="padding-top: 3.5em">
+    <div class="container">
         <router-outlet></router-outlet>
-      </div>
     </div>
   </div>
 </main>
-<footer class="container-fluid">
-<div class="d-block text-center">
-  <span class="my-1">&copy; Direitos Reservados</span>
-</div>
-</footer>

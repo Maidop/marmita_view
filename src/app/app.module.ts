@@ -5,21 +5,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {
-  ButtonModule,
-  CardModule,
-  CheckboxModule,
-  ConfirmationService,
-  ConfirmDialogModule,
-  DialogModule,
-  InputTextModule,
-  MenuModule,
-  MultiSelectModule,
-  MessageService,
-  PanelMenuModule,
-  SidebarModule,
-  TableModule,
-  ToastModule,
-  DropdownModule, InputMaskModule, CalendarModule
+    ButtonModule,
+    CardModule,
+    CheckboxModule,
+    ConfirmationService,
+    ConfirmDialogModule,
+    DialogModule,
+    InputTextModule,
+    MenuModule,
+    MultiSelectModule,
+    MessageService,
+    PanelMenuModule,
+    SidebarModule,
+    TableModule,
+    ToastModule,
+    DropdownModule, InputMaskModule, MenubarModule
 } from 'primeng';
 import {SidebarService} from './service/sidebar.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -40,8 +40,6 @@ import { TipoComidaListComponent } from './tipo-comida/tipo-comida-list.componen
 import {TipoComidaFormComponent} from './tipo-comida/tipo-comida-form.component';
 import {TamanhoListComponent} from './tamanho/tamanho-list.component';
 import {TamanhoFormComponent} from './tamanho/tamanho-form.component';
-import {PedidoListComponent} from "./pedido/pedido-list.component";
-import {PedidoFormComponent} from "./pedido/pedido-form.component";
 
 @NgModule({
   declarations: [
@@ -63,40 +61,34 @@ import {PedidoFormComponent} from "./pedido/pedido-form.component";
     TipoComidaFormComponent,
     LoginComponent,
     TamanhoListComponent,
-    TamanhoFormComponent,
-    PedidoListComponent,
-    PedidoFormComponent,
-
-
+    TamanhoFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ButtonModule,
-    ToastModule,
-    SidebarModule,
-    MenuModule,
-    BrowserAnimationsModule,
-    CardModule,
-    TableModule,
-    ConfirmDialogModule,
-    HttpClientModule,
-    PanelMenuModule,
-    FormsModule,
-    InputTextModule,
-    CheckboxModule,
-    DialogModule,
-    MultiSelectModule,
-    DropdownModule,
-    InputMaskModule,
-    CalendarModule,
-
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ButtonModule,
+        ToastModule,
+        SidebarModule,
+        MenuModule,
+        BrowserAnimationsModule,
+        CardModule,
+        TableModule,
+        ConfirmDialogModule,
+        HttpClientModule,
+        PanelMenuModule,
+        FormsModule,
+        InputTextModule,
+        CheckboxModule,
+        DialogModule,
+        MultiSelectModule,
+        DropdownModule,
+        InputMaskModule,
+        MenubarModule
+    ],
   providers: [
     SidebarService,
     MessageService,
     ConfirmationService,
-
     {
       provide: LOCALE_ID,
       useValue: 'pt'

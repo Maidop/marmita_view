@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SidebarService} from './service/sidebar.service';
 import {MenuItem} from 'primeng';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
@@ -11,6 +11,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class AppComponent implements OnInit {
   title = 'marmitex';
   menuList: MenuItem[];
+  @Output() deslogar: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private sidebarService: SidebarService,
               private http: HttpClient) {
@@ -20,40 +21,46 @@ export class AppComponent implements OnInit {
         routerLink: '/inicio',
         icon: 'pi pi-home'
       },
-        {
-          label: 'Cadastros',
-          icon: '',
-          items: [
-            {
-              label: 'Ingredientes',
-              routerLink: '/ingrediente',
-              icon: '',
-            },
-            {
-              label: 'Tipo de Comida',
-              routerLink: '/tipo-comida',
-            },
-            {
-              label: 'Comidas',
-              routerLink: '/comida',
-            },
-            {
-              label: 'Cliente',
-              routerLink: '/cliente',
-              icon: '',
-            },
-            {
-              label: 'Cardapio',
-              routerLink: '/cardapio',
-              icon: '',
-            },
-            {
-              label: 'Tamanhos',
-              routerLink: 'tamanho',
-              icon: ''
-            }
+      {
+        label: 'Pedido',
+        icon: '',
+        items: [
+          {
+            label: 'Cliente',
+            routerLink: '/cliente',
+            icon: '',
+          },
+          {
+            label: 'Tamanhos do pedido',
+            routerLink: 'tamanho',
+            icon: ''
+          }
         ]
-      }
+      },
+      {
+        label: 'Marmita',
+        icon: '',
+        items: [
+          {
+            label: 'Ingredientes',
+            routerLink: '/ingrediente',
+            icon: '',
+          },
+          {
+            label: 'Comidas',
+            routerLink: '/comida',
+          },
+          {
+            label: 'Tipos de comida',
+            routerLink: '/tipo-comida',
+          },
+        ]
+      },
+      {
+        label: 'cardapio teste',
+        routerLink: '/cardapio',
+        icon: '',
+      },
     ];
   }
 
@@ -62,5 +69,6 @@ export class AppComponent implements OnInit {
 
   logout() {
     localStorage.removeItem("Authorization");
+    this.deslogar.emit(false);
   }
 }
