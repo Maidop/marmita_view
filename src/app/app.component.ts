@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'marmitex';
   menuList: MenuItem[];
   @Output() deslogar: EventEmitter<boolean> = new EventEmitter();
-
+  login: Login;
   constructor(private sidebarService: SidebarService,
               private http: HttpClient,
               private loginService: LoginService) {
@@ -69,6 +69,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
   }
 
   logout() {
