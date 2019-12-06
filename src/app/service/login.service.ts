@@ -29,7 +29,7 @@ export class LoginService extends BaseService<Login>{
     this.logado.emit(logado);
   }
 
-  getLogado(): EventEmitter{
+  getLogado(): EventEmitter<boolean>{
     return this.logado;
   }
 
